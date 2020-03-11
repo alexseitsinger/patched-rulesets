@@ -107,3 +107,16 @@ mdTsReactRedux | core, prose, react, redux, typescript
 json           | json
 jsonPackage    | jsonPackage
 
+```javascript
+const { configs } = require("qt-rulesets")
+
+module.exports = {
+  overrides: [
+    {
+      files: ["*.js", "*.jsx"],
+      ...configs.js,
+    },
+  ],
+}
+```
+
