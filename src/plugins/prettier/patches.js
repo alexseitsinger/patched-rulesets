@@ -68,7 +68,7 @@ module.exports = {
      */
 
     "lines-around-comment": [
-      "error",
+      "off",
       {
         beforeBlockComment: true,
         afterBlockComment: true,
