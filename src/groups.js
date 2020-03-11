@@ -1,4 +1,4 @@
-const groupNames = {
+const groups = {
   core: [
     "eslint-comments",
     "node",
@@ -12,38 +12,23 @@ const groupNames = {
     "no-loops",
     "prettier",
   ],
-  react: [
-    "react", "react-perf", "react-hooks", "better-styled-components"
-  ],
-  redux: [
-    "react-redux", "redux-saga"
-  ],
-  typescript: [
-    "@typescript-eslint/eslint-plugin", "jsx-falsy", "tsdoc"
-  ],
-  safety: [
-    "security",
-  ],
-  testing: [
-    "jest",
-    "jest-formatting",
-  ],
-  json: [
-    "json",
-    "package-json",
-  ],
-  prose: [
-    "spellcheck",
-    "markdown",
-  ],
+  react: ["react", "react-perf", "react-hooks", "better-styled-components"],
+  redux: ["react-redux", "redux-saga"],
+  typescript: ["@typescript-eslint/eslint-plugin", "jsx-falsy", "tsdoc"],
+  safety: ["security"],
+  testing: ["jest", "jest-formatting"],
+  json: ["json", "package-json"],
+  prose: ["spellcheck", "markdown"],
 }
 
 const groupNames = Object.keys(groups)
 const groupsWithoutCore = ["json", "package-json"]
 
-export function getPlugins(names) {
+function getPlugins(names) {
   const filteredNames = names.filter(n => n.toLowerCase() !== "core")
-  const isWithCore = !filteredNames.map(n => groupsWithoutCore.includes(n)).includes(true)
+  const isWithCore = !filteredNames
+    .map(n => groupsWithoutCore.includes(n))
+    .includes(true)
 
   let plugins = [...(isWithCore ? groups.core : [])]
 
@@ -54,4 +39,9 @@ export function getPlugins(names) {
   })
 
   return plugins
+}
+
+module.exports = {
+  getPlugins,
+  groups,
 }

@@ -1,11 +1,7 @@
-import deepMerge from "deepmerge"
-import uniq from "lodash/uniq"
-
-import { groups } from "./groups"
-
-const {
-  core, json, prose, react, redux, testing, typescript,
-} = groups
+const deepMerge = require("deepmerge")
+const uniq = require("lodash/uniq")
+const { groups } = require("./groups")
+const { core, json, prose, react, redux, testing, typescript } = groups
 
 const ruleOrder = [
   "eslint",
@@ -85,7 +81,7 @@ function usesTypescript(pluginNames) {
     .includes(true)
 }
 
-export function getRules(pluginName, isTypeScript = false) {
+function getRules(pluginName, isTypeScript = false) {
   const target = getDirectoryName(pluginName)
   const module_ = require(`./plugins/${target}/rules.js`)
   if (shouldUseLanguage(module_)) {
@@ -155,7 +151,7 @@ function collectPatches(ruleSets, forPlugin) {
     }, {})
 }
 
-export function createConfig({ pluginNames, useEslint = true }) {
+function createConfig({ pluginNames, useEslint = true }) {
   const plugins = sortPlugins(pluginNames)
 
   const isTypeScript = usesTypescript(plugins)
@@ -250,4 +246,9 @@ export function createConfig({ pluginNames, useEslint = true }) {
   })
 
   return config
+}
+
+module.exports = {
+  createConfig,
+  getRuleSet,
 }

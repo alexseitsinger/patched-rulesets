@@ -1,6 +1,6 @@
 const configs = require("./configs")
-const { groups, getPlugins } = require("./groups")
 const { createConfig, getRuleSet } = require("./setup")
+const { getPlugins, groups } = require("./groups")
 
 module.exports = {
   configs,
