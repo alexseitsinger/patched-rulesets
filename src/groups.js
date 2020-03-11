@@ -14,7 +14,7 @@ const groups = {
   ],
   react: ["react", "react-perf", "react-hooks", "better-styled-components"],
   redux: ["react-redux", "redux-saga"],
-  typescript: ["@typescript-eslint/eslint-plugin", "jsx-falsy", "tsdoc"],
+  typescript: ["@typescript-eslint/eslint-plugin", "tsdoc"],
   safety: ["security"],
   testing: ["jest", "jest-formatting"],
   json: ["json", "package-json"],
