@@ -1,6 +1,6 @@
 {
-  "name": "qt-configs",
-  "description": "Rulesets for the QT Linter & Formatter",
+  "name": "qt-rulesets",
+  "description": "Rulesets for the QT linter and formatter",
   "version": "0.0.0",
   "main": "src/index.js",
   "files": [
