@@ -90,13 +90,15 @@ module.exports = {
   /**
    * Enforce or disallow capitalization of the first letter of a comment.
    *
+   * This is annoying so disable it.
+   *
    * (fixable).
    *
    * Https://eslint.org/docs/rules/capitalized-comments.
    */
 
   "capitalized-comments": [
-    "error",
+    "off",
     "always",
     {
       ignorePattern: "",
@@ -426,7 +428,7 @@ module.exports = {
    * Https://eslint.org/docs/rules/line-comment-position.
    */
 
-  "line-comment-position": ["error", "above"],
+  "line-comment-position": ["warn", "above"],
 
   /**
    * Enforce consistent linebreak style.
@@ -450,7 +452,7 @@ module.exports = {
    */
 
   "lines-around-comment": [
-    "error",
+    "warn",
     {
       beforeBlockComment: false,
       afterBlockComment: false,
@@ -673,7 +675,7 @@ module.exports = {
    * Https://eslint.org/docs/rules/multiline-comment-style.
    */
 
-  "multiline-comment-style": ["error", "starred-block"],
+  "multiline-comment-style": ["warn", "starred-block"],
 
   /**
    * Enforce newlines between operands of ternary expressions.
@@ -766,7 +768,7 @@ module.exports = {
    * Https://eslint.org/docs/rules/no-inline-comments.
    */
 
-  "no-inline-comments": "error",
+  "no-inline-comments": "warn",
 
   /**
    * Disallow if statements as the only statement in else blocks.
@@ -1370,7 +1372,7 @@ module.exports = {
    */
 
   "spaced-comment": [
-    "error",
+    "warn",
     "always",
     {
       exceptions: [],
