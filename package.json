@@ -1,7 +1,7 @@
 {
-  "name": "qt-rulesets",
+  "name": "patched-rulesets",
   "version": "0.1.0",
-  "description": "Rulesets for the QT linter and formatter",
+  "description": "Rulesets for the Patched linter and formatter",
   "author": {
     "email": "software@alexseitsinger.com",
     "name": "Alex Seitsinger"
@@ -9,11 +9,11 @@
   "license": "BSD-2-Clause",
   "repository": {
     "type": "git",
-    "url": "https://github.com/alexseitsinger/qt-rulesets.git"
+    "url": "https://github.com/alexseitsinger/patched-rulesets.git"
   },
-  "homepage": "https://github.com/alexseitsinger/qt-rulesets",
+  "homepage": "https://github.com/alexseitsinger/patched-rulesets",
   "bugs": {
-    "url": "https://github.com/alexseitsinger/qt-rulesets/issues"
+    "url": "https://github.com/alexseitsinger/patched-rulesets/issues"
   },
   "main": "src/index.js",
   "files": [
