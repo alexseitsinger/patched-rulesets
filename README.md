@@ -1,11 +1,11 @@
-# QT Configs
+# QT Rulesets
 
-Configs for the QT linter & formatter.
+Rulsets for the generating eslint configs used with QT.
 
 ## Installation
 
 ```bash
-yarn add qt-configs
+yarn add qt-rulesets
 ```
 
 ***
@@ -34,7 +34,7 @@ Returns an array of plugin names for the specified group.
 
 ---
 
-#### Configs
+#### configs
 
 A collection of preset configurations.
 
