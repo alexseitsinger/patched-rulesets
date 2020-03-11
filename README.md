@@ -1,11 +1,11 @@
-# QT Rulesets
+# Patched Rulesets
 
-Rulsets for the generating eslint configs used with QT. This package isn't necessary to install manually as it's already used by [QT](https://github.com/alexseitsinger/qt).
+Rulsets for the generating eslint configs used with Patched. This package isn't necessary to install manually as it's already used by [Patched](https://github.com/alexseitsinger/patched).
 
 ## Installation
 
 ```bash
-yarn add qt-rulesets
+yarn add patched-rulesets
 ```
 
 ***
@@ -15,7 +15,7 @@ yarn add qt-rulesets
 Returns a complete eslint configuration object that contains rules for the plugins of each specified plugin group.
 
 ```javascript
-const { createConfig, getPlugins } = require("qt-rulesets")
+const { createConfig, getPlugins } = require("patched-rulesets")
 
 const jsConfig = createConfig({
   pluginNames: getPlugins(["react"]),
@@ -38,7 +38,7 @@ module.exports = {
 Returns the rules, patches, and options for the specified plugin. This is used internally by createConfig, but exposed in case some extra manual adjustments are necessary.
 
 ```javascript
-const { getRuleSet } = require("qt-rulesets")
+const { getRuleSet } = require("patched-rulesets")
 
 const reactRuleSet = getRuleSet("react")
 // { rules: {...}, patches: {...}, options: {...} }
@@ -77,7 +77,7 @@ jsonPackage | package-json
 Converts the provided array of group names into the actual list of plugin names.
 
 ```javascript
-const { getPlugins } = require("qt-rulesets")
+const { getPlugins } = require("patched-rulesets")
 
 const plugins = getPlugins(["react"])
 // -> ["react", "react-hooks", "react-perf", "better-styled-components"]
@@ -108,7 +108,7 @@ json           | json
 jsonPackage    | jsonPackage
 
 ```javascript
-const { configs } = require("qt-rulesets")
+const { configs } = require("patched-rulesets")
 
 module.exports = {
   overrides: [
