@@ -1,6 +1,6 @@
 # QT Rulesets
 
-Rulsets for the generating eslint configs used with QT. This package isn't necessary to install manually as it's already used by the [https://github.com/alexseitsinger/qt](QT).
+Rulsets for the generating eslint configs used with QT. This package isn't necessary to install manually as it's already used by the [https://github.com/alexseitsinger/qt](qt).
 
 ## Installation
 
