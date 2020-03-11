@@ -12,7 +12,9 @@ const groups = {
     "no-loops",
     "prettier",
   ],
-  react: ["react", "react-perf", "react-hooks", "better-styled-components"],
+  react: [
+    "react", "react-perf", "react-hooks", "better-styled-components"
+  ],
   redux: ["react-redux", "redux-saga"],
   typescript: ["@typescript-eslint/eslint-plugin", "tsdoc"],
   safety: ["security"],
