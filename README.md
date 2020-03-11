@@ -87,7 +87,8 @@ const plugins = getPlugins(["react"])
 
 #### configs
 
-A collection of preset configurations that are generated from the methods above.
+A collection of preset configurations that are generated from the methods above. While this only provides the rules, it may be useful if someone is manually piecing together
+ther own eslint config.
 
 Name           | Plugin groups used
 ---            | ---
