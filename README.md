@@ -57,7 +57,7 @@ module.exports = {
 
 #### groups
 
-Returns an array of plugin group names.
+Returns an object of groups, with each containing an array of plugin names.
 
 Name        | Plugins included
 ---         | ---
