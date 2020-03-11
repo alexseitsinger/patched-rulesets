@@ -2,16 +2,16 @@ module.exports = {
   parser: "@typescript-eslint/parser",
   parserOptions: {
     project: "./tsconfig.json",
-    tsconfigRootDir: "."
+    tsconfigRootDir: ".",
   },
   settings: {
     "import/parsers": {
-      "@typescript-eslint/parser": [".ts", ".tsx"]
+      "@typescript-eslint/parser": [".ts", ".tsx"],
     },
     "import/resolver": {
       typescript: {
-        alwaysTryTypes: true
-      }
-    }
-  }
+        alwaysTryTypes: true,
+      },
+    },
+  },
 }
