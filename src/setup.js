@@ -1,6 +1,7 @@
 const deepMerge = require("deepmerge")
 const uniq = require("lodash/uniq")
 const { groups } = require("./groups")
+const { normalizeRules } = require("./normalize")
 const { core, json, prose, react, redux, testing, typescript } = groups
 
 const ruleOrder = [
@@ -245,6 +246,19 @@ function createConfig({ pluginNames, useEslint = true }) {
     }
   })
 
+  /**
+   * Normalize the rules.
+   *
+   * In the future, perhaps detect this at runtime?
+   */
+  normalizeRules(config, {
+    semi: "never",
+    spaces: 2,
+  })
+
+  /**
+   * Return the final config
+   */
   return config
 }
 
