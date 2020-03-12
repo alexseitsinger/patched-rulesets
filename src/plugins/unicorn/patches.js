@@ -1,6 +1,13 @@
 module.exports = {
   eslint: {
+    /**
+     * Unicorn  has an enhanced version of this rule.
+     */
     "no-nested-ternary": "off",
+
+    /**
+     * Unsure why this is here...
+     */
     "prefer-destructuring": [
       "error",
       {
