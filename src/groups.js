@@ -10,13 +10,13 @@ const groups = {
     "unicorn",
     "sort-destructure-keys",
     "no-loops",
-    // Sadly, this plugin causes issues with braces. We should do formatting in a second
-    // step, rather than integrating it into eslint directly.
-    //"prettier",
+    /*
+     *  Sadly, this plugin causes issues with braces. We should do formatting in a second
+     *  step, rather than integrating it into eslint directly.
+     * "prettier",
+     */
   ],
-  react: [
-    "react", "react-perf", "react-hooks", "better-styled-components"
-  ],
+  react: ["react", "react-perf", "react-hooks", "better-styled-components"],
   redux: ["react-redux", "redux-saga"],
   typescript: ["@typescript-eslint/eslint-plugin", "tsdoc"],
   safety: ["security"],
