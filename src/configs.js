@@ -66,7 +66,7 @@ const json = createConfig({
   useEslint: false,
 })
 
-const jsonPackage = createConfig({
+const packageJson = createConfig({
   pluginNames: ["package-json"],
   useEslint: false,
 })
@@ -84,6 +84,6 @@ module.exports = {
   mdTs,
   mdTsReact,
   mdTsReactRedux,
+  packageJson,
   json,
-  jsonPackage,
 }
