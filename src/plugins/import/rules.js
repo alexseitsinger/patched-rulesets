@@ -1,8 +1,5 @@
 /**
- * NOTE:
- *
- * This config should be listed AFTER 'node' and BEFORE 'typescript-eslint'
- * because each of these configs patches rules from other.
+ * https://github.com/benmosher/eslint-plugin-import
  */
 
 module.exports = {
@@ -13,7 +10,6 @@ module.exports = {
    * NOTE: patches because problems with TypeScript when mixed ESM and CJS.
    *        (see xo plugin)
    *
-   * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/first.md
    */
   "import/first": "error",
 
@@ -22,30 +18,25 @@ module.exports = {
    *
    * NOTES:
    * - With React, we sometimes export stateless functional components, then
-   *   define its propType below, so disable this rule.
+   *   define its propType below, so perhaps disable this rule.
    *
-   * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/exports-last.md
+   * - After moving to TypeScript, we no longer use PropTypes, so no need to keep this
+   *   rule disabled (at least from here).
    */
-  "import/exports-last": "off",
+  "import/exports-last": "error",
 
   /**
    * Report repeated import of the same module in multiple places.
-   *
-   * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-duplicates.md
    */
   "import/no-duplicates": "error",
 
   /**
    * Report namespace imports.
-   *
-   * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-namespace.md
    */
   "import/no-namespace": "off",
 
   /**
    * Ensure consistent use of file extension within the import path.
-   *
-   * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md
    */
   "import/extensions": [
     "error",
@@ -69,9 +60,8 @@ module.exports = {
   /**
    * Enforce a convention in module import order.
    *
-   * NOTE: patches in simple-import-sort.
-   *
-   * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
+   * NOTES
+   * - Disabled in simple-import-sort
    */
   "import/order": [
     "error",
@@ -88,15 +78,11 @@ module.exports = {
   /**
    * Enforce a newline after import statements.
    *
-   * NOTE: patches in typescript-eslint
-   * NOTE: patches as it doesn't work with TypeScript (according to XO)
-   *
-   * Disabled because it fucks up
-   *
-   * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/newline-after-import.md
+   * NOTES
+   * - Disabled (in @typescript-eslint) as it doesn't work with it. (according to XO)
    */
   "import/newline-after-import": [
-    "off",
+    "error",
     {
       count: 2,
     },
@@ -109,8 +95,6 @@ module.exports = {
    * - Using named exports in packages allows for more flexibility when the
    *   package grows and functionality is added later on. As a result, disable
    *   this rule.
-   *
-   * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/prefer-default-export.md
    */
   "import/prefer-default-export": "off",
 
@@ -120,8 +104,6 @@ module.exports = {
    * NOTES:
    * - Some modules use a lot of dependencies, so either increase this to a
    *   larger number, or disable it completely.
-   *
-   * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/max-dependencies.md
    */
   "import/max-dependencies": [
     "error",
@@ -138,34 +120,35 @@ module.exports = {
    *   continue to use a larger number of unassigned modules.
    * - Sometimes, we import CSS as modules without assigning them a name. So,
    *   disable this rule completely.
-   *
-   * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unassigned-import.md
+   * - Continnue to fill this rule with the patches we use so we don't need tot idsable
+   *   this rule completely.
    */
   "import/no-unassigned-import": [
-    "off",
+    "error",
     {
-      allow: ["core-js/stable", "url-search-params-polyfill"],
+      allow: [
+        "core-js/stable",
+        "url-search-params-polyfill",
+        "beautiful-react-redux/patch",
+        "@babel/polyfill",
+        "**/register/**",
+        "**/*.{jpeg,jpg,gif,png,ico,css}",
+      ],
     },
   ],
 
   /**
    * Forbid named default exports.
-   *
-   * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-default.md
    */
   "import/no-named-default": "off",
 
   /**
    * Forbid default exports.
-   *
-   * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-default-export.md
    */
   "import/no-default-export": "off",
 
   /**
    * Forbid named exports.
-   *
-   * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-export.md
    */
   "import/no-named-export": "off",
 
@@ -174,8 +157,6 @@ module.exports = {
    *
    * - We default export arrays for action-types, so disable that rule.
    * - We default export arrow funcs so disalbe for that (and anon funcs).
-   *
-   * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-anonymous-default-export.md
    */
   "import/no-anonymous-default-export": [
     "error",
@@ -196,20 +177,16 @@ module.exports = {
    * NOTES:
    * - Since we sometimes export functions as we define them throughout a
    *   module, its probably better to disable this rule.
-   *
-   * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/group-exports.md
    */
   "import/group-exports": "off",
 
   /**
    * Enforce a leading comment with the webpackChunkName for dynamic imports.
-   *
-   * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/dynamic-import-chunkname.md
    */
   "import/dynamic-import-chunkname": [
     "error",
     {
-      importFunctions: [],
+      importFunctions: ["importComponent", "lazy", "React.lazy"],
       webpackChunknameFormat: "[a-zA-Z0-9-/_]+",
     },
   ],
@@ -218,11 +195,8 @@ module.exports = {
    * Ensure imports point to a file/module that can be resolved.
    *
    * NOTES:
-   * - patches in typescript-eslint.
-   * - According to XO, patches because it doesn't work with TypeScript and
-   *   is buggy.
-   *
-   * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unresolved.md
+   * - Disabled in @typescript-eslint
+   * - According to XO, this rule is buggy with TypeScript, so should be disabled.
    */
   "import/no-unresolved": [
     "error",
@@ -236,33 +210,26 @@ module.exports = {
    * Ensure named imports correspond to a named export in the remote file.
    *
    * NOTE:
-   * - patches in typescript-eslint
-   * -patches as it doesn't work with TypeScript
-   *  (according to XO plugin)
-   *
-   * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/named.md
+   * - Disabled via @typescript-eslint
+   * - According to XO, this doesn't work with TypeScript, so should be disabled.
    */
   "import/named": "error",
 
   /**
    * Ensure a default export is present, given a default import.
    *
-   * - patches in typscript-eslint.
+   * - Disabled via @typescript-eslint
    * - This causes the parser to do its own parsing and tracking,
    *   so disable this. (recommended by the @typescript-eslint github).
-   *
-   * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/default.md
    */
   "import/default": "error",
 
   /**
    * Ensure imported namespaces contain dereferenced properties as they are dereferenced.
    *
-   * - patches in typescript-eslint.
+   * - Disabled via @typescript-eslint
    * - This causes the parser to do its own parsing and tracking,
    *   so disable this. (recommended by the @typescript-eslint github).
-   *
-   * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/namespace.md
    */
   "import/namespace": [
     "error",
@@ -278,8 +245,6 @@ module.exports = {
    * NOTES:
    * - Since we split the frontend bundles into two (client, server) we could
    *   add zones to prevent importing server bundles from client.
-   *
-   * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-restricted-paths.md
    */
   "import/no-restricted-paths": [
     "off",
@@ -290,8 +255,6 @@ module.exports = {
 
   /**
    * Forbid import of modules using absolute paths.
-   *
-   * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-absolute-path.md
    */
   "import/no-absolute-path": [
     "error",
@@ -307,8 +270,6 @@ module.exports = {
    *
    * NOTES:
    * - We use dynamic requires for packages, so disable this rule.
-   *
-   * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-dynamic-require.md
    */
   "import/no-dynamic-require": "off",
 
@@ -317,8 +278,6 @@ module.exports = {
    *
    * NOTES:
    * - We often import components from subdirectories, we disable this rule.
-   *
-   * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-internal-modules.md
    */
   "import/no-internal-modules": [
     "off",
@@ -329,15 +288,11 @@ module.exports = {
 
   /**
    * Forbid webpack loader syntax in imports.
-   *
-   * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-webpack-loader-syntax.md
    */
   "import/no-webpack-loader-syntax": "error",
 
   /**
    * Forbid a module from importing itself.
-   *
-   * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-self-import.md
    */
   "import/no-self-import": "error",
 
@@ -345,13 +300,12 @@ module.exports = {
    * Forbid a module from importing a module with a dependency path back to
    * itself.
    *
-   * NOTE: patches in typescript-eslint.
-   * NOTE: Enable this when Node.js has ES2015 module support.
-   * NOTE: patches according to XO plugin.
+   * NOTES:
+   * - Disabled via @typescript-eslint
+   * - Enable with Node.js has ES2015 module support.
+   * - Disabled according to XO plugin.
    * - Recommended (@typescript-eslint) to only run this at CI/push time to
    *   lessen local performance burden.
-   *
-   * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-cycle.md
    */
   "import/no-cycle": [
     "error",
@@ -362,8 +316,6 @@ module.exports = {
 
   /**
    * Prevent unnecessary path segments in import and require statements.
-   *
-   * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-useless-path-segments.md
    */
   "import/no-useless-path-segments": [
     "error",
@@ -374,8 +326,6 @@ module.exports = {
 
   /**
    * Forbid importing modules from parent directories.
-   *
-   * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-relative-parent-imports.md
    */
   "import/no-relative-parent-imports": "off",
 
@@ -386,8 +336,6 @@ module.exports = {
    * - This gets thrown from our webpack configs, so disable it.
    * - According to XO plugin, enable this when Node.js has ES2015 module
    *   support.
-   *
-   * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/unambiguous.md
    */
   "import/unambiguous": "off",
 
@@ -397,8 +345,6 @@ module.exports = {
    * NOTES:
    * - According to XO plugin, enable this when Node.js has ES2015 module
    *   support.
-   *
-   * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-commonjs.md
    */
   "import/no-commonjs": [
     "off",
@@ -410,8 +356,6 @@ module.exports = {
 
   /**
    * Report AMD require and define calls.
-   *
-   * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-amd.md
    */
   "import/no-amd": "error",
 
@@ -421,8 +365,6 @@ module.exports = {
    * NOTES:
    * - We might need to disable this rule completely, if we find that we
    *   continue to use a larger number of builtin modules.
-   *
-   * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-nodejs-modules.md
    */
   "import/no-nodejs-modules": [
     "error",
@@ -433,8 +375,6 @@ module.exports = {
 
   /**
    * Report any invalid exports, i.e. re-export of the same name.
-   *
-   * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/export.md
    */
   "import/export": "error",
 
@@ -444,33 +384,31 @@ module.exports = {
    * This rule doesn't have an equivalent check in TypeScript, so only run
    * them at CI/push time to lessen the local performance burden. (according
    * to @typescript-eslint docs)
-   * nOTE: patches in typescript-eslint
    *
-   * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-as-default.md
+   * NOTES:
+   * - Disabled via @typescript-eslint
    */
   "import/no-named-as-default": "error",
 
   /**
    * Report use of exported name as property of default export.
    *
+   * NOTES:
    * - This causes the parser to do its own parsing and tracking,
    *   so disable this. (recommended by the @typescript-eslint github).
-   * - patches in typescript-eslint
-   *
-   * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-as-default-member.md
+   * - Disabled via @typescript-eslint
    */
   "import/no-named-as-default-member": "error",
 
   /**
    * Report imported names marked with @deprecated documentation tag.
    *
-   * NOTE: According to XO plugin, looks useful but is unstable, so disable.
+   * NOTES:
+   * - According to XO plugin, looks useful but is unstable, so disable.
    * - According to @typescript-eslint docs, TypeScript doesn't have an
    *   equivalent check for this, so to lessen local performance burden, this
    *   should only be run at CI/push time.
-   * - patches in typescript-eslint.
-   *
-   * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-deprecated.md
+   * - Disabled via @typescript-eslint.
    */
   "import/no-deprecated": "error",
 
@@ -480,8 +418,6 @@ module.exports = {
    * NOTES:
    * - Since we use devDependencies in tests & webpack, we use the glob
    *   patterns to exclude checking modules in those files.
-   *
-   * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md
    */
   "import/no-extraneous-dependencies": [
     "error",
@@ -517,8 +453,6 @@ module.exports = {
 
   /**
    * Forbid the use of mutable exports with var or let.
-   *
-   * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-mutable-exports.md
    */
   "import/no-mutable-exports": "error",
 
@@ -529,12 +463,10 @@ module.exports = {
    * - This rule does not have an equivalent check in TypeScript, so
    *   (@typescript-eslint) recommends only running this check at CI/push time
    *   to lessen the local performance burden.
-   * - patches in typescript-eslint.
-   *
-   * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unused-modules.md
+   * - Disabled via @typescript-eslint.
    */
   "import/no-unused-modules": [
-    "off",
+    "error",
     {
       unusedExports: true,
 
