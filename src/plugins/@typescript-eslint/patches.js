@@ -28,7 +28,7 @@ module.exports = {
       "comma-spacing": "off",
       "default-param-last": "off",
       "func-call-spacing": "off",
-      "indent": "off",
+      indent: "off",
       "no-array-constructor": "off",
       "no-dupe-class-members": "off",
       "no-empty-function": "off",
@@ -39,21 +39,23 @@ module.exports = {
       "no-unused-vars": "off",
       "no-use-before-define": "off",
       "no-useless-constructor": "off",
-      "quotes": "off",
+      quotes: "off",
       "require-await": "off",
       "no-return-await": "off",
-      "semi": "off",
+      semi: "off",
       "space-before-function-paren": "off",
 
       /**
        * Patches according to plugin:recommended
        * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/configs/recommended.json
        */
-      "camelcase": "off",
-      //"no-array-constructor": "off",
-      //"no-empty-function": "off",
-      //"no-unused-vars": "off",
-      //"no-use-before-define": "off",
+      camelcase: "off",
+      /*
+       * "no-array-constructor": "off",
+       * "no-empty-function": "off",
+       * "no-unused-vars": "off",
+       * "no-use-before-define": "off",
+       */
       "no-var": "error",
       "prefer-const": "error",
       "prefer-rest-params": "error",
@@ -63,10 +65,12 @@ module.exports = {
        * Patches according to plugin:requiring-type-checking
        * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/configs/recommended-requiring-type-checking.json
        */
-      //"no-var": "error",
-      //"prefer-const": "error",
-      //"prefer-rest-params": "error",
-      //"prefer-spread": "error",
+      /*
+       * "no-var": "error",
+       * "prefer-const": "error",
+       * "prefer-rest-params": "error",
+       * "prefer-spread": "error",
+       */
 
       /**
        * Patches according to plugin:eslint (for .ts, .tsx)
@@ -82,7 +86,6 @@ module.exports = {
       "no-this-before-super": "off",
       // This is checked by Typescript using option 'strictNullChecks'
       "no-undef": "off",
-      "no-dupe-class-members": "off",
       "no-redeclare": "off",
     },
   },
