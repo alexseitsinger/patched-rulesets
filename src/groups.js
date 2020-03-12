@@ -10,7 +10,9 @@ const groups = {
     "unicorn",
     "sort-destructure-keys",
     "no-loops",
-    "prettier",
+    // Sadly, this plugin causes issues with braces. We should do formatting in a second
+    // step, rather than integrating it into eslint directly.
+    //"prettier",
   ],
   react: [
     "react", "react-perf", "react-hooks", "better-styled-components"
@@ -19,7 +21,8 @@ const groups = {
   typescript: ["@typescript-eslint/eslint-plugin", "tsdoc"],
   safety: ["security"],
   testing: ["jest", "jest-formatting"],
-  json: ["json", "package-json"],
+  json: ["json"],
+  package: ["package-json"],
   prose: ["spellcheck", "markdown"],
 }
 
