@@ -256,8 +256,7 @@ module.exports = {
    * Disallow nested ternary expressions
    * (Partially fixable)
    *
-   * We recomend disabling the ESLint no-nested-ternary rule in favor of this
-   * one
+   * This requires a patch to disable the original eslint rule.
    */
   "unicorn/no-nested-ternary": "error",
 
@@ -563,6 +562,11 @@ module.exports = {
       checkFilenames: false,
     },
   ],
+
+  /**
+   * Enforce better string content. (fixable)
+   */
+  "unicorn/string-content": "off",
 
   /**
    * Require new when throwing an error
