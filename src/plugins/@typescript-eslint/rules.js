@@ -315,7 +315,7 @@ module.exports = {
    * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/indent.md
    */
   "@typescript-eslint/indent": [
-    "off",
+    "error",
     2,
     {
       SwitchCase: 1,
@@ -324,7 +324,7 @@ module.exports = {
         let: 2,
         const: 3,
       },
-      outerIIFEBody: 1,
+      outerIIFEBody: 0,
       MemberExpression: 1,
       FunctionDeclaration: {
         parameters: "first",
