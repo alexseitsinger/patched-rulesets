@@ -408,7 +408,7 @@ module.exports = {
   /**
    * Enforce consistent spacing before and after keywords.
    *
-   * This fucks up prettier, so pathc it there.
+   * Stroustrup brace-style fucks up here.
    *
    * Https://eslint.org/docs/rules/keyword-spacing.
    */
@@ -416,7 +416,7 @@ module.exports = {
   "keyword-spacing": [
     "error",
     {
-      before: true,
+      before: false,
       after: true,
       overrides: {},
     },
@@ -1253,7 +1253,7 @@ module.exports = {
    * Https://eslint.org/docs/rules/semi-style.
    */
 
-  "semi-style": ["error", "first"],
+  "semi-style": ["error", "last"],
 
   /**
    * Require object keys to be sorted.
