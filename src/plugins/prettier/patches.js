@@ -1,6 +1,6 @@
 module.exports = {
   all: {
-    "flowtype": {
+    flowtype: {
       /**
        * Patches according to eslint-config-prettier/flowtype
        * https://github.com/prettier/eslint-config-prettier/blob/master/flowtype.js
@@ -167,7 +167,7 @@ module.exports = {
       "unicode-bom": "off",
       "wrap-iife": "off",
       "wrap-regex": "off",
-      "yield-star-spacing": "off"
+      "yield-star-spacing": "off",
     },
   },
 }
