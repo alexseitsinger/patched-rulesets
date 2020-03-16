@@ -1,5 +1,5 @@
 /**
- * https://github.com/DianaSuvorova/eslint-plugin-react-redux/blob/HEAD/docs/rules/connect-prefer-named-arguments.md
+ * https://github.com/DianaSuvorova/eslint-plugin-react-redux
  */
 
 module.exports = {
