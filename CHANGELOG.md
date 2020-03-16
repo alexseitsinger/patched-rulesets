@@ -1,3 +1,10 @@
+<a name="v0.4.1"></a>
+## [v0.4.1](https://github.com/alexseitsinger/patched-rulesets/compare/v0.4.0...v0.4.1) (2020-03-16)
+
+### Bug Fixes
+- Removes typo. ([9d0f743](https://github.com/alexseitsinger/patched-rulesets/commit/9d0f743eafa74a490e8287f4ecd072d9e5c69f7d))
+
+
 <a name="v0.4.0"></a>
 ## [v0.4.0](https://github.com/alexseitsinger/patched-rulesets/compare/v0.3.3...v0.4.0) (2020-03-16)
 
