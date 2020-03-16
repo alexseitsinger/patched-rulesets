@@ -56,6 +56,9 @@ module.exports = {
   /**
    * Prevent missing displayName in a React component definition.
    *
+   * NOTES:
+   * - "off" according to us
+   *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/display-name.md
    */
   "react/display-name": [
@@ -67,6 +70,9 @@ module.exports = {
 
   /**
    * Forbid certain props on Components.
+   *
+   * NOTES:
+   * - "off" according to us
    *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-component-props.md
    */
@@ -139,7 +145,8 @@ module.exports = {
   /**
    * Prevent passing children as props.
    *
-   * 'warn' according to recommended.
+   * NOTES:
+   * - "warn" according to plugin:recommended
    *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-children-prop.md
    */
@@ -155,7 +162,8 @@ module.exports = {
   /**
    * Prevent problem with children and props.dangerouslySetInnerHTML.
    *
-   * 'warn' according to plugin:recommended.
+   * NOTES:
+   * - "warn" according to plugin:recommended
    *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-danger-with-children.md
    */
@@ -165,7 +173,8 @@ module.exports = {
    * Prevent usage of deprecated methods, including component lifecyle
    * methods.
    *
-   * 'warn' according to plugin:recommended
+   * NOTES:
+   * - "warn" according to plugin:recommended
    *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-deprecated.md
    */
@@ -188,7 +197,8 @@ module.exports = {
   /**
    * Prevent direct mutation of this.state.
    *
-   * 'warn' according to recommended.
+   * NOTES:
+   * - "warn" according to plugin:recommended
    *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-direct-mutation-state.md
    */
@@ -197,7 +207,8 @@ module.exports = {
   /**
    * Prevent usage of findDOMNode.
    *
-   * 'warn' according to plugin:recommended
+   * NOTES:
+   * - "warn" according to plugin:recommended
    *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-find-dom-node.md
    */
@@ -206,7 +217,8 @@ module.exports = {
   /**
    * Prevent usage of isMounted.
    *
-   * 'warn' according to recommended.
+   * NOTES:
+   * - "warn" according to plugin:recommended
    *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-is-mounted.md
    */
@@ -216,7 +228,7 @@ module.exports = {
    * Prevent multiple component definition per file.
    *
    * NOTES:
-   * - In tets, we often have multuple components declared in one file. As a
+   * - In tets, we often have multiple components declared in one file. As a
    *   result, it might be better to disable this rule. For now, we will
    *   throw an error if there are more than one Class components in a file.
    *   If we have multiple stateless functions, it will ignore them.
@@ -241,7 +253,8 @@ module.exports = {
   /**
    * Prevent usage of the return value of React.render.
    *
-   * 'warn' according to plugin:recommended
+   * NOTES:
+   * - "warn" according to plugin:recommended
    *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-render-return-value.md
    */
@@ -249,6 +262,9 @@ module.exports = {
 
   /**
    * Prevent usage of setState.
+   *
+   * NOTES:
+   * - "off" according to us
    *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-set-state.md
    */
@@ -264,7 +280,8 @@ module.exports = {
   /**
    * Prevent using string references in ref attribute.
    *
-   * 'warn' according to plugin:recommended
+   * NOTES:
+   * - "warn" according to plugin:recommended
    *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-string-refs.md
    */
@@ -285,7 +302,8 @@ module.exports = {
   /**
    * Prevent invalid characters from appearing in markup.
    *
-   * 'warn' according to plugin:recommended.
+   * NOTES:
+   * - "warn" according to plugin:recommended
    *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unescaped-entities.md
    */
@@ -299,7 +317,8 @@ module.exports = {
   /**
    * Prevent usage of unknown DOM property. (fixable)
    *
-   * 'warn' according to plugin:recommended
+   * NOTES:
+   * - "warn" according to plugin:recommended
    *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unknown-property.md
    */
@@ -313,7 +332,8 @@ module.exports = {
   /**
    * Prevent usage of unsafe lifecycle methods
    *
-   * plugin:recommended prefers 'off'
+   * NOTES:
+   * - "off" according to plugin:recommended
    *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unsafe.md
    */
@@ -380,7 +400,8 @@ module.exports = {
   /**
    * Prevent missing props validation in a React component definition.
    *
-   * Warn according to plugin:recommended.
+   * NOTES:
+   * - "warn" according to plugin:recommended.
    *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md
    */
@@ -396,7 +417,8 @@ module.exports = {
   /**
    * Prevent missing React when using JSX.
    *
-   * 'warn' according to plugin:recommended
+   * NOTES:
+   * - "warn" according to plugin:recommended
    *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/react-in-jsx-scope.md
    */
@@ -425,14 +447,16 @@ module.exports = {
   /**
    * Enforce ES5 or ES6 class for returning value in render function.
    *
-   * 'warn' according to plugin:recommended
+   * NOTES:
+   * - "warn" according to plugin:recommended
    *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-render-return.md
    */
   "react/require-render-return": "warn",
 
   /**
-   * Prevent extra closing tags for components without children. (fixable)
+   * Prevent extra closing tags for components without children.
+   * (fixable)
    *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/self-closing-comp.md
    */
@@ -545,30 +569,37 @@ module.exports = {
   "react/void-dom-elements-no-children": "error",
 
   /**
-   * Enforce boolean attributes notation in JSX. (fixable)
+   * Enforce boolean attributes notation in JSX.
+   * (fixable)
    *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-boolean-value.md
    */
   "react/jsx-boolean-value": "off",
 
   /**
-   * Enforce or disallow spaces inside of curly braces in JSX attributes and expressions.
+   * Enforce or disallow spaces inside of curly braces in JSX attributes and
+   * expressions.
    *
-   * - patches according to eslint-config-prettier/react
+   * NOTES:
+   * - Patched via prettier
+   * - "off" according to eslint-config-prettier/react
    *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-child-element-spacing.md
    */
-  "react/jsx-child-element-spacing": "off",
+  "react/jsx-child-element-spacing": "error",
 
   /**
-   * Validate closing bracket location in JSX. (fixable)
+   * Validate closing bracket location in JSX.
+   * (fixable)
    *
-   * - patches according to eslint-config-prettier/react
+   * NOTES:
+   * - Patched via prettier
+   * - "off" according to eslint-config-prettier/react
    *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md
    */
   "react/jsx-closing-bracket-location": [
-    "off",
+    "error",
     {
       nonEmpty: "after-props",
       selfClosing: "tag-aligned",
@@ -576,23 +607,30 @@ module.exports = {
   ],
 
   /**
-   * Validate closing tag location in JSX. (fixable)
+   * Validate closing tag location in JSX.
+   * (fixable)
    *
-   * - patches according to eslint-config-prettier/react
+   * NOTES:
+   * - Patched via prettier
+   * - "off" according to eslint-config-prettier/react
    *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-tag-location.md
    */
-  "react/jsx-closing-tag-location": "off",
+  "react/jsx-closing-tag-location": "error",
 
   /**
-   * Enforce or disallow spaces inside of curly braces in JSX attributes and expressions. (fixable)
+   * Enforce or disallow spaces inside of curly braces in JSX attributes and
+   * expressions.
+   * (fixable)
    *
-   * - patches according to eslint-config-prettier/react
+   * NOTES:
+   * - Patched via prettier.
+   * - "off" according to eslint-config-prettier/react
    *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-spacing.md
    */
   "react/jsx-curly-spacing": [
-    "off",
+    "error",
     {
       // might want to change this
       when: "never",
@@ -603,11 +641,13 @@ module.exports = {
   /**
    * Enforce or disallow spaces around equal signs in JSX attributes. (fixable)
    *
-   * - patches according to eslint-config-prettier/react
+   * NOTES:
+   * - Patched via prettier
+   * - "off" according to eslint-config-prettier/react
    *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-equals-spacing.md
    */
-  "react/jsx-equals-spacing": ["off", "never"],
+  "react/jsx-equals-spacing": ["error", "never"],
 
   /**
    * Restrict file extensions that may contain JSX.
@@ -622,13 +662,16 @@ module.exports = {
   ],
 
   /**
-   * Enforce position of the first prop in JSX. (fixable)
+   * Enforce position of the first prop in JSX.
+   * (fixable)
    *
-   * - patches according to eslint-config-prettier/react
+   * NOTES:
+   * - Patched via prettier
+   * - "off" according to eslint-config-prettier/react
    *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-first-prop-new-line.md
    */
-  "react/jsx-first-prop-new-line": ["off", "multiline"],
+  "react/jsx-first-prop-new-line": ["error", "multiline"],
 
   /**
    * Enforce event handler naming conventions in JSX.
@@ -644,14 +687,17 @@ module.exports = {
   ],
 
   /**
-   * Validate JSX indentation. (fixable)
+   * Validate JSX indentation.
+   * (fixable)
    *
-   * - patches according to eslint-config-prettier/react
+   * NOTES:
+   * - Patched via prettier
+   * - "off" according to eslint-config-prettier/react
    *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent.md
    */
   "react/jsx-indent": [
-    "off",
+    "error",
     2,
     {
       checkAttributes: true,
@@ -660,18 +706,22 @@ module.exports = {
   ],
 
   /**
-   * Validate props indentation in JSX. (fixable)
+   * Validate props indentation in JSX.
+   * (fixable)
    *
-   * - patches according to eslint-config-prettier/react
+   * NOTES:
+   * - Patched via prettier
+   * - "off" according to eslint-config-prettier/react
    *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent-props.md
    */
-  "react/jsx-indent-props": ["off", "first"],
+  "react/jsx-indent-props": ["error", "first"],
 
   /**
    * Validate JSX has key prop when in array or iterator.
    *
-   * 'warn' according to recommended.
+   * NOTES:
+   * - "warn" according to plugin:recommended
    *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-key.md
    */
@@ -692,14 +742,16 @@ module.exports = {
   /**
    * Limit maximum of props on a single line in JSX. (fixable)
    *
-   * - patches according to eslint-config-prettier/react
+   * NOTES:
+   * - Patched via prettier
+   * - "off" according to eslint-config-prettier/react
    *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-max-props-per-line.md
    */
   "react/jsx-max-props-per-line": [
-    "off",
+    "error",
     {
-      //maxmimum: 1,
+      //maximum: 1,
       when: "multiline",
     },
   ],
@@ -723,7 +775,8 @@ module.exports = {
   /**
    * Prevent comments from being inserted as text nodes.
    *
-   * Warn according to recommended.
+   * NOTES:
+   * - "warn" according to plugin:recommended
    *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-comment-textnodes.md
    */
@@ -732,7 +785,8 @@ module.exports = {
   /**
    * Prevent duplicate props in JSX.
    *
-   * 'warn' accorind to recommended.
+   * NOTES:
+   * - "warn" according to plugin:recommended
    *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-duplicate-props.md
    */
@@ -746,6 +800,9 @@ module.exports = {
   /**
    * Prevent usage of unwrapped JSX strings.
    *
+   * NOTES:
+   * - "off" according to us
+   *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-literals.md
    */
   "react/jsx-no-literals": [
@@ -758,7 +815,8 @@ module.exports = {
   /**
    * Prevent usage of unsafe target='_blank'.
    *
-   * 'warn' according to plugin recommended.
+   * NOTES:
+   * - "warn" according to plugin:recommended
    *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-target-blank.md
    */
@@ -772,10 +830,8 @@ module.exports = {
   /**
    * Disallow undeclared variables in JSX.
    *
-   * 'warn' according to recommended.
-   *
    * NOTES:
-   * - We might want this be true.
+   * - "warn" according to plugin:recommended.
    *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-undef.md
    */
@@ -789,12 +845,14 @@ module.exports = {
   /**
    * Limit to one expression per line in JSX.
    *
-   * - patches according to eslint-config-prettier/react
+   * NOTES:
+   * - Patched via prettier
+   * - "off" according to eslint-config-prettier/react
    *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-one-expression-per-line.md
    */
   "react/jsx-one-expression-per-line": [
-    "off",
+    "error",
     {
       allow: "single-child",
     },
@@ -837,16 +895,22 @@ module.exports = {
   ],
 
   /**
-   * Disallow multiple spaces between inline JSX props. (fixable)
+   * Disallow multiple spaces between inline JSX props.
+   * (fixable)
    *
-   * - patches according to eslint-config-prettier/react
+   * NOTES:
+   * - Patched via prettier
+   * - "off" according to eslint-config-prettier/react
    *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-props-no-multi-spaces.md
    */
-  "react/jsx-props-no-multi-spaces": "off",
+  "react/jsx-props-no-multi-spaces": "error",
 
   /**
    * Disallow JSX props spreading.
+   *
+   * NOTES:
+   * - "off" according to us.
    *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-props-no-spreading.md
    */
@@ -854,6 +918,9 @@ module.exports = {
 
   /**
    * Enforce default props alphabetical sorting.
+   *
+   * NOTES:
+   * - Disabled according to us.
    *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-sort-default-props.md
    */
@@ -865,7 +932,11 @@ module.exports = {
   ],
 
   /**
-   * Enforce props alphabetical sorting. (fixable)
+   * Enforce props alphabetical sorting.
+   * (fixable)
+   *
+   * NOTES:
+   * - Disabled according to us.
    *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-sort-props.md
    */
@@ -884,12 +955,14 @@ module.exports = {
   /**
    * Validate whitespace in and around the JSX opening and closing brackets.
    *
-   * - patches according to eslint-config-prettier/react
+   * NOTES:
+   * - Patched via prettier
+   * - "off" according to eslint-plugin-prettier/react
    *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-tag-spacing.md
    */
   "react/jsx-tag-spacing": [
-    "off",
+    "error",
     {
       closingSlash: "never",
       beforeSelfClosing: "always",
@@ -901,7 +974,8 @@ module.exports = {
   /**
    * Prevent React to be incorrectly marked as unused.
    *
-   * 'warn' according to recommended.
+   * NOTES:
+   * - "warn" according to plugin:recommended
    *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-react.md
    */
@@ -910,21 +984,26 @@ module.exports = {
   /**
    * Prevent variables used in JSX to be incorrectly marked as unused.
    *
-   * Changes to warn according to plugin 'recommended'
+   * NOTES:
+   * - "warn" according to plugin:recommended
    *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-vars.md
    */
   "react/jsx-uses-vars": "warn",
 
   /**
-   * Prevent missing parentheses around multilines JSX. (fixable)
+   * Prevent missing parentheses around multilines JSX.
    *
-   * - patches according to eslint-config-prettier/react
+   * (fixable)
+   *
+   * NOTES:
+   * - Patched via prettier
+   * - "off" according to eslint-config-prettier/react
    *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-wrap-multilines.md
    */
   "react/jsx-wrap-multilines": [
-    "off",
+    "error",
     {
       declaration: "parens-new-line",
       assignment: "parens-new-line",
