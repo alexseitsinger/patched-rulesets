@@ -293,7 +293,7 @@ module.exports = {
    *
    * - patches according to eslint-config-prettier/@typescript-eslint
    */
-  "@typescript-eslint/func-call-spacing": ["off", "never"],
+  "@typescript-eslint/func-call-spacing": ["error", "never"],
 
   /**
    * Enforces naming of generic type variables
@@ -311,8 +311,6 @@ module.exports = {
    *
    * However, without enabling this, the indentation of stroustrup blocks
    * is misaligned when formatted.
-   *
-   * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/indent.md
    */
   "@typescript-eslint/indent": [
     "error",
@@ -353,7 +351,7 @@ module.exports = {
     "error",
     {
       prefixWithI: "never",
-      //allowUnderscorePrefix: false
+      // allowUnderscorePrefix: false
     },
   ],
 
@@ -476,7 +474,7 @@ module.exports = {
    *
    * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-extra-parens.md
    */
-  "@typescript-eslint/no-extra-parens": "off",
+  "@typescript-eslint/no-extra-parens": "error",
 
   /**
    * Disallow unnecessary semicolons
@@ -486,7 +484,7 @@ module.exports = {
    *
    * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-extra-semi.md
    */
-  "@typescript-eslint/no-extra-semi": "off",
+  "@typescript-eslint/no-extra-semi": "error",
 
   /**
    * Forbids the use of classes as namespaces
@@ -642,7 +640,7 @@ module.exports = {
     {
       ignoreRhs: false,
       allowConstantLoopConditions: false,
-      //checkArrayPredicates: false
+      // checkArrayPredicates: false
     },
   ],
 
@@ -710,7 +708,7 @@ module.exports = {
   /**
    * Disallow the use of variables before they are defined
    *
-   * Disalbe the eslint rule for this one.
+   * Disable the eslint rule for this one.
    *
    * NOTE:
    * The standard practice is to define interfaces/types at the top of the
@@ -837,7 +835,7 @@ module.exports = {
    * - patches according to eslint-config-prettier/@typescript-eslint
    */
   "@typescript-eslint/quotes": [
-    "off",
+    "error",
     "double",
     {
       avoidEscape: true,
@@ -890,7 +888,7 @@ module.exports = {
    * - Requires disabling the original eslint rule.
    * -This version adds support for numerous typescript features.
    */
-  "@typescript-eslint/semi": "off",
+  "@typescript-eslint/semi": "error",
 
   /**
    * enforce consistent spacing before function definition opening parenthesis
@@ -898,7 +896,7 @@ module.exports = {
    *
    * - patches according to eslint-config-prettier/@typescript-eslint
    */
-  "@typescript-eslint/space-before-function-paren": "off",
+  "@typescript-eslint/space-before-function-paren": "error",
 
   /**
    * Restricts the types allowed in boolean expressions
@@ -908,7 +906,7 @@ module.exports = {
     "error",
     {
       allowNullable: false,
-      //allowSafe: false,
+      // allowSafe: false,
       ignoreRhs: false,
     },
   ],
