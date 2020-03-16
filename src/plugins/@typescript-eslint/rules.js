@@ -165,8 +165,9 @@ module.exports = {
    * Bans “// @ts-ignore” comments from being used
    * (Recommended)
    *
-   * NOTE: This is used by react-imported-component when imported.js is
-   *       generated, so disable.
+   * NOTES:
+   * - 'react-imported-component' generated import modules that use '@ts-ignore', so we
+   * should disable this rule.
    */
   "@typescript-eslint/ban-ts-ignore": "error",
 
@@ -193,8 +194,9 @@ module.exports = {
    * Enforce consistent brace style for blocks
    * (Fixable)
    *
+   * NOTES:
    * - Requires disabling the original eslint config rule.
-   * - This rule is disabled entirely in plugin:recommended.
+   * - "off" according to plugin:recommended
    */
   "@typescript-eslint/brace-style": [
     "error",
@@ -208,9 +210,9 @@ module.exports = {
    * Enforce camelCase naming convention
    * (Recommended)
    *
+   * NOTES:
    * - Requires disabling the eslint rule.
-   *
-   * - Note: Should ignore this for REST params that need to match a model
+   * - Should ignore this for REST params that need to match a model
    *   field.
    */
   "@typescript-eslint/camelcase": [
@@ -256,7 +258,8 @@ module.exports = {
   /**
    * Require explicit return types on functions and class methods
    *
-   * 'warn' according to plugin:recommended
+   * NOTES:
+   * - "warn" according to plugin:recommended
    */
   "@typescript-eslint/explicit-function-return-type": [
     "warn",
@@ -288,10 +291,10 @@ module.exports = {
   /**
    * Require or disallow spacing between function identifiers and their
    * invocations
-   *
    * (Fixable)
    *
-   * - patches according to eslint-config-prettier/@typescript-eslint
+   * NOTES:
+   * - "off" according to eslint-config-prettier/@typescript-eslint
    */
   "@typescript-eslint/func-call-spacing": [ "error", "never" ],
 
@@ -303,14 +306,14 @@ module.exports = {
   /**
    * Enforce consistent indentation
    * (Fixable)
+   * (Normalized)
    *
-   * This is disabled according to plugin:recommended.
-   *
-   * This rule fucks up indentation of Types (if they're longer than max-len),
+   * NOTES:
+   * - "off" according to plugin:recommended.
+   * - This rule fucks up indentation of Types (if they're longer than max-len),
    * so keep this rule disabled.
-   *
-   * However, without enabling this, the indentation of stroustrup blocks
-   * is misaligned when formatted.
+   * - Enabling this rule fixes indentation with stroustrup brace-style when formatting
+   * with prettier.
    */
   "@typescript-eslint/indent": [
     "error",
@@ -359,7 +362,8 @@ module.exports = {
    * Require a specific member delimiter style for interfaces and type
    * literals.
    *
-   * - patches according to eslint-config-prettier/@typescript-eslint
+   * NOTES:
+   * - "off" according to eslint-config-prettier/@typescript-eslint
    */
   "@typescript-eslint/member-delimiter-style": [
     "off",
@@ -414,7 +418,8 @@ module.exports = {
    * Bans usage of the delete operator with computed key expressions
    * (Fixable)
    *
-   * We sometimes do this, so disable this rule.
+   * NOTES:
+   * - We sometimes use dynamic deletes, so disable this rule.
    *
    * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-dynamic-delete.md
    */
@@ -444,7 +449,8 @@ module.exports = {
    * Disallow usage of the any type
    * (Fixable)
    *
-   * We sometimes use any for dynamic properties and rest args, so disable
+   * NOTES:
+   * - We sometimes use any for dynamic properties and rest args, so disable
    *
    * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-explicit-any.md
    */
@@ -467,10 +473,12 @@ module.exports = {
    * Disallow unnecessary parentheses
    * (Fixable)
    *
-   * NOTE: We might want to disable this because sometimes, using parens makes
-   * code easier to read.
-   *
-   * - patches according to eslint-config-prettier/@typescript-eslint
+   * NOTES:
+   * - "off" according to eslint-config-prettier/@typescript-eslint
+   * - We use parens to make code more readable, and this rule conflicts with
+   *   react/jsx-wrap-multilines. So, just turn this rule off.
+   * - Patched via eslint-plugin-react.
+   * - Patched via prettier
    *
    * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-extra-parens.md
    */
@@ -480,7 +488,9 @@ module.exports = {
    * Disallow unnecessary semicolons
    * (Fixable)
    *
-   * - patches according to eslint-config-prettier/@typescript-eslint
+   * NOTES:
+   * - "off" according to eslint-config-prettier/@typescript-eslint
+   * - Patched via prettier
    *
    * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-extra-semi.md
    */
@@ -733,10 +743,8 @@ module.exports = {
 
   /**
    * Disallows the use of require statements except in import statements
-   *
-   * - patches because we import our client store via require in a function.
    */
-  "@typescript-eslint/no-var-requires": "off",
+  "@typescript-eslint/no-var-requires": "error",
 
   /**
    * Prefer a ‘for-of’ loop over a standard ‘for’ loop if the index is only
@@ -813,7 +821,7 @@ module.exports = {
    * Requires any function or method that returns a Promise to be marked async
    * (Requires Type Info)
    *
-   * patches because annoying
+   * - "off" because annoying
    */
   "@typescript-eslint/promise-function-async": [
     "off",
@@ -829,10 +837,10 @@ module.exports = {
   /**
    * Enforce the consistent use of either backticks, double, or single quotes
    * (Fixable)
+   * (Normalized)
+   * (Replacement:eslint)
    *
-   * - This rule extends the original eslint rule, so disable that one for
-   *   this.
-   * - patches according to eslint-config-prettier/@typescript-eslint
+   * - "off" according to eslint-config-prettier/@typescript-eslint
    */
   "@typescript-eslint/quotes": [
     "error",
@@ -884,9 +892,8 @@ module.exports = {
   /**
    * Require or disallow semicolons instead of ASI
    * (Fixable)
-   *
-   * - Requires disabling the original eslint rule.
-   * -This version adds support for numerous typescript features.
+   * (Normalized)
+   * (Replacement:eslint)
    */
   "@typescript-eslint/semi": "error",
 
@@ -894,7 +901,7 @@ module.exports = {
    * enforce consistent spacing before function definition opening parenthesis
    * (Fixable)
    *
-   * - patches according to eslint-config-prettier/@typescript-eslint
+   * - "off" according to eslint-config-prettier/@typescript-eslint
    */
   "@typescript-eslint/space-before-function-paren": "error",
 
