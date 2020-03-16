@@ -1,3 +1,10 @@
+<a name="v0.5.0"></a>
+## [v0.5.0](https://github.com/alexseitsinger/patched-rulesets/compare/v0.4.1...v0.5.0) (2020-03-16)
+
+### Features
+- Adds id-length to normalizing. ([7f3c3a2](https://github.com/alexseitsinger/patched-rulesets/commit/7f3c3a24e76447d5706404bcca1bad961d8aed1a))
+
+
 <a name="v0.4.1"></a>
 ## [v0.4.1](https://github.com/alexseitsinger/patched-rulesets/compare/v0.4.0...v0.4.1) (2020-03-16)
 
