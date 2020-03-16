@@ -146,15 +146,15 @@ function normalizeQuotesRules(rules, value = DEFAULT_VALUES.quotes) {
   const jsxQuotes = "jsx-quotes"
   switch (value) {
     case "double": {
-      normalizeEnabledRule(rules, jsxQuotes, "prefer-double")
+      normalizeEnabledRule(rules, jsxQuotes, ["error", "prefer-double"])
       break
     }
     case "single": {
-      normalizeEnabledRule(rules, jsxQuotes, "prefer-single")
+      normalizeEnabledRule(rules, jsxQuotes, ["error", "prefer-single"])
       break
     }
     default: {
-      normalizeEnabledRule(rules, jsxQuotes, "prefer-double")
+      normalizeEnabledRule(rules, jsxQuotes, ["error", "prefer-double"])
     }
   }
 }
