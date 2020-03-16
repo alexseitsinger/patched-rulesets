@@ -11,8 +11,6 @@ const groups = {
     "sort-destructure-keys",
     "no-loops",
     /*
-     *  Sadly, this plugin causes issues with braces. We should do formatting in a second
-     *  step, rather than integrating it into eslint directly.
      * "prettier",
      */
   ],
