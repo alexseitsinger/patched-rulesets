@@ -1,3 +1,13 @@
+<a name="v0.4.0"></a>
+## [v0.4.0](https://github.com/alexseitsinger/patched-rulesets/compare/v0.3.3...v0.4.0) (2020-03-16)
+
+### Code Refactoring
+- Updates some rules. ([eb085d4](https://github.com/alexseitsinger/patched-rulesets/commit/eb085d4034427be6e700cde082ef0109572e2ada))
+
+### Features
+- Adds patch to @typescript. ([dfe6f50](https://github.com/alexseitsinger/patched-rulesets/commit/dfe6f50086cbbca00ba04cbf257cecd1f46742d1))
+
+
 <a name="v0.3.3"></a>
 ## [v0.3.3](https://github.com/alexseitsinger/patched-rulesets/compare/v0.3.2...v0.3.3) (2020-03-16)
 
