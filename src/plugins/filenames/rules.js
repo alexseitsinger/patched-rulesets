@@ -5,14 +5,14 @@ module.exports = {
    *
    * This convention can be configured using a regular expression (the
    * default is camelCase.js). Additionally, exporting files can be ignored
-   * with a second configuratoin parameter.
+   * with a second configuration parameter.
    */
   "filenames/match-regex": ["error", "^[a-z-]+$", true],
 
   /**
    * Match the filename against the default exported value in the module.
    * Files that don't have a default export will be ignored. THe exports of
-   * index.js are matched against their parent directoru.
+   * index.js are matched against their parent directory.
    *
    * Add one or multiple transforms (an array)  to allow for multiple naming
    * convention policies.
@@ -27,7 +27,7 @@ module.exports = {
    *
    *     export default function variableName
    *
-   *     Would throw an error if file isnt named:
+   *     Would throw an error if file isn't named:
    *     1. variableName.react.js
    *     2. variableName.js
    *     3. variableName/index.js
