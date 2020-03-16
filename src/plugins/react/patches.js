@@ -6,8 +6,4 @@ module.exports = {
      */
     "@typescript-eslint/no-extra-parens": "off",
   },
-  "eslint": {
-    ""
-  }
-
 }
