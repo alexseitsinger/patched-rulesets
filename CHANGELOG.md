@@ -1,3 +1,10 @@
+<a name="v0.3.3"></a>
+## [v0.3.3](https://github.com/alexseitsinger/patched-rulesets/compare/v0.3.2...v0.3.3) (2020-03-16)
+
+### Bug Fixes
+- Fixes IIFE indentation. ([211babf](https://github.com/alexseitsinger/patched-rulesets/commit/211babf02b7e658a268dd3d1c69276f37fabb03e))
+
+
 <a name="v0.3.2"></a>
 ## [v0.3.2](https://github.com/alexseitsinger/patched-rulesets/compare/v0.3.1...v0.3.2) (2020-03-16)
 
