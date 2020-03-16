@@ -1,6 +1,6 @@
 /* eslint-disable no-param-reassign */
 
-const DISABLED_RULE_VALUES = ["off", 0]
+const DISABLED_RULE_VALUES = [ "off", 0 ]
 const DEFAULT_VALUES = {
   quotes: "double",
   semi: "never",
@@ -53,12 +53,12 @@ function normalizeMaxLength(
 }
 
 function normalizeSemiRules(rules, value = DEFAULT_VALUES.semi) {
-  const semiRuleNames = ["semi", "@typescript-eslint/semi"]
+  const semiRuleNames = [ "semi", "@typescript-eslint/semi" ]
   semiRuleNames.forEach(ruleName => {
-    normalizeEnabledRule(rules, ruleName, ["error", value])
+    normalizeEnabledRule(rules, ruleName, [ "error", value ])
   })
 
-  const noExtraRules = ["no-extra-semi", "@typescript-eslint/no-extra-semi"]
+  const noExtraRules = [ "no-extra-semi", "@typescript-eslint/no-extra-semi" ]
   noExtraRules.forEach(ruleName => {
     normalizeEnabledRule(rules, ruleName, "error")
   })
@@ -73,8 +73,8 @@ function normalizeSemiRules(rules, value = DEFAULT_VALUES.semi) {
 }
 
 function normalizeIndentRules(rules, spaces = DEFAULT_VALUES.indent) {
-  const indentRules = ["indent", "@typescript-eslint/indent"]
-  const indentReactRules = ["react/jsx-indent-props", "react/jsx-indent"]
+  const indentRules = [ "indent", "@typescript-eslint/indent" ]
+  const indentReactRules = [ "react/jsx-indent-props", "react/jsx-indent" ]
 
   indentRules.forEach(ruleName => {
     normalizeEnabledRule(rules, ruleName, [
@@ -87,7 +87,7 @@ function normalizeIndentRules(rules, spaces = DEFAULT_VALUES.indent) {
           let: 2,
           const: 3,
         },
-        outerIIFEBody: 0,
+        outerIIFEBody: 1,
         MemberExpression: 1,
         FunctionDeclaration: {
           parameters: "first",
@@ -111,12 +111,12 @@ function normalizeIndentRules(rules, spaces = DEFAULT_VALUES.indent) {
   })
 
   indentReactRules.forEach(ruleName => {
-    normalizeEnabledRule(rules, ruleName, ["error", spaces])
+    normalizeEnabledRule(rules, ruleName, [ "error", spaces ])
   })
 }
 
 function normalizeBraceStyleRules(rules, value = DEFAULT_VALUES.braceStyle) {
-  const ruleNames = ["brace-style", "@typescript-eslint/brace-style"]
+  const ruleNames = [ "brace-style", "@typescript-eslint/brace-style" ]
 
   ruleNames.forEach(ruleName => {
     normalizeEnabledRule(rules, ruleName, [
@@ -130,7 +130,7 @@ function normalizeBraceStyleRules(rules, value = DEFAULT_VALUES.braceStyle) {
 }
 
 function normalizeQuotesRules(rules, value = DEFAULT_VALUES.quotes) {
-  const ruleNames = ["quotes", "@typescript-eslint/quotes"]
+  const ruleNames = [ "quotes", "@typescript-eslint/quotes" ]
 
   ruleNames.forEach(ruleName => {
     normalizeEnabledRule(rules, ruleName, [
@@ -146,15 +146,15 @@ function normalizeQuotesRules(rules, value = DEFAULT_VALUES.quotes) {
   const jsxQuotes = "jsx-quotes"
   switch (value) {
     case "double": {
-      normalizeEnabledRule(rules, jsxQuotes, ["error", "prefer-double"])
+      normalizeEnabledRule(rules, jsxQuotes, [ "error", "prefer-double" ])
       break
     }
     case "single": {
-      normalizeEnabledRule(rules, jsxQuotes, ["error", "prefer-single"])
+      normalizeEnabledRule(rules, jsxQuotes, [ "error", "prefer-single" ])
       break
     }
     default: {
-      normalizeEnabledRule(rules, jsxQuotes, ["error", "prefer-double"])
+      normalizeEnabledRule(rules, jsxQuotes, [ "error", "prefer-double" ])
     }
   }
 }
@@ -176,8 +176,8 @@ function normalizeFeatureVersions(rules, nodeVersion = DEFAULT_VALUES.nodeVersio
   })
 
   const ecmaVersionRules = [
-      "node/no-unsupported-features/es-builtins",
-      "node/no-unsupported-features/es-syntax",
+    "node/no-unsupported-features/es-builtins",
+    "node/no-unsupported-features/es-syntax",
   ]
   ecmaVersionRules.forEach(ruleName => {
     normalizeEnabledRule(rules, ruleName, [
@@ -189,7 +189,7 @@ function normalizeFeatureVersions(rules, nodeVersion = DEFAULT_VALUES.nodeVersio
   })
 }
 
-function normalizeRules(config, { braceStyle, maxLength, quotes, nodeVersion, semi, spaces, ecmaVersion }) {
+function normalizeRules(config, { braceStyle, ecmaVersion, maxLength, nodeVersion, quotes, semi, spaces }) {
   const { rules } = config
 
   normalizeIndentRules(rules, spaces)

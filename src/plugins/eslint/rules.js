@@ -8,7 +8,7 @@ module.exports = {
    *
    * https://eslint.org/docs/rules/array-bracket-newline.
    */
-  "array-bracket-newline": ["error", "consistent"],
+  "array-bracket-newline": [ "error", "consistent" ],
 
   /**
    * Enforce consistent spacing inside array brackets.
@@ -37,7 +37,7 @@ module.exports = {
    *
    * https://eslint.org/docs/rules/array-element-newline.
    */
-  "array-element-newline": ["error", "consistent"],
+  "array-element-newline": [ "error", "consistent" ],
 
   /**
    * Disallow or enforce spaces inside of blocks after opening block and
@@ -47,7 +47,7 @@ module.exports = {
    *
    * https://eslint.org/docs/rules/block-spacing.
    */
-  "block-spacing": ["error", "always"],
+  "block-spacing": [ "error", "always" ],
 
   /**
    * Enforce consistent brace style for blocks.
@@ -191,7 +191,7 @@ module.exports = {
    *
    * https://eslint.org/docs/rules/consistent-this.
    */
-  "consistent-this": ["error", "that", "self"],
+  "consistent-this": [ "error", "that", "self" ],
 
   /**
    * Require or disallow newline at the end of files.
@@ -200,7 +200,7 @@ module.exports = {
    *
    * https://eslint.org/docs/rules/eol-last.
    */
-  "eol-last": ["error", "always"],
+  "eol-last": [ "error", "always" ],
 
   /**
    * Require or disallow spacing between function identifiers and their
@@ -210,7 +210,7 @@ module.exports = {
    *
    * https://eslint.org/docs/rules/func-call-spacing.
    */
-  "func-call-spacing": ["error", "never"],
+  "func-call-spacing": [ "error", "never" ],
 
   /**
    * Require function names to match the name of the variable or property to
@@ -263,7 +263,7 @@ module.exports = {
    *
    * https://eslint.org/docs/rules/function-paren-newline.
    */
-  "function-paren-newline": ["error", "consistent"],
+  "function-paren-newline": [ "error", "consistent" ],
 
   /**
    * Disallow specified identifiers.
@@ -337,7 +337,7 @@ module.exports = {
         let: 2,
         const: 3,
       },
-      outerIIFEBody: 0,
+      outerIIFEBody: 1,
       MemberExpression: 1,
       FunctionDeclaration: {
         parameters: "first",
@@ -367,7 +367,7 @@ module.exports = {
    *
    * https://eslint.org/docs/rules/jsx-quotes.
    */
-  "jsx-quotes": ["error", "prefer-double"],
+  "jsx-quotes": [ "error", "prefer-double" ],
 
   /**
    * Enforce consistent spacing between keys and values in object literal
@@ -404,7 +404,7 @@ module.exports = {
    *
    * https://eslint.org/docs/rules/line-comment-position.
    */
-  "line-comment-position": ["warn", "above"],
+  "line-comment-position": [ "warn", "above" ],
 
   /**
    * Enforce consistent linebreak style.
@@ -413,7 +413,7 @@ module.exports = {
    *
    * https://eslint.org/docs/rules/linebreak-style.
    */
-  "linebreak-style": ["error", "unix"],
+  "linebreak-style": [ "error", "unix" ],
 
   /**
    * Require empty lines around comments.
@@ -638,14 +638,14 @@ module.exports = {
    *
    * https://eslint.org/docs/rules/multiline-comment-style.
    */
-  "multiline-comment-style": ["warn", "starred-block"],
+  "multiline-comment-style": [ "warn", "starred-block" ],
 
   /**
    * Enforce newlines between operands of ternary expressions.
    *
    * https://eslint.org/docs/rules/multiline-ternary.
    */
-  "multiline-ternary": ["error", "always-multiline"],
+  "multiline-ternary": [ "error", "always-multiline" ],
 
   /**
    * Require constructor names to begin with a capital letter.
@@ -748,18 +748,18 @@ module.exports = {
       // Arithmetic groups disallowed from mixing with other groups.
 
       groups: [
-        ["%", "**"],
-        ["%", "+"],
-        ["%", "-"],
-        ["%", "*"],
-        ["%", "/"],
-        ["**", "+"],
-        ["**", "-"],
-        ["**", "/"],
-        ["&", "|", "^", "~", "<<", ">>", ">>>"],
-        ["==", "!=", "===", "!==", ">", ">=", "<", "<="],
-        ["&&", "||"],
-        ["in", "instanceof"],
+        [ "%", "**" ],
+        [ "%", "+" ],
+        [ "%", "-" ],
+        [ "%", "*" ],
+        [ "%", "/" ],
+        [ "**", "+" ],
+        [ "**", "-" ],
+        [ "**", "/" ],
+        [ "&", "|", "^", "~", "<<", ">>", ">>>" ],
+        [ "==", "!=", "===", "!==", ">", ">=", "<", "<=" ],
+        [ "&&", "||" ],
+        [ "in", "instanceof" ],
       ],
       allowSamePrecedence: false,
     },
@@ -909,7 +909,7 @@ module.exports = {
   "no-underscore-dangle": [
     "off",
     {
-      allow: ["__STATE__", "__INITIAL_STATE__"],
+      allow: [ "__STATE__", "__INITIAL_STATE__" ],
       allowAfterThis: false,
       allowAfterSuper: false,
       enforceInMethodNames: true,
@@ -1021,7 +1021,7 @@ module.exports = {
    *
    * https://eslint.org/docs/rules/one-var.
    */
-  "one-var": ["error", "never"],
+  "one-var": [ "error", "never" ],
 
   /**
    * Require or disallow newlines around variable declarations.
@@ -1030,7 +1030,7 @@ module.exports = {
    *
    * https://eslint.org/docs/rules/one-var-declaration-per-line.
    */
-  "one-var-declaration-per-line": ["error", "always"],
+  "one-var-declaration-per-line": [ "error", "always" ],
 
   /**
    * Require or disallow assignment operator shorthand where possible.
@@ -1039,7 +1039,7 @@ module.exports = {
    *
    * https://eslint.org/docs/rules/operator-assignment.
    */
-  "operator-assignment": ["error", "always"],
+  "operator-assignment": [ "error", "always" ],
 
   /**
    * Enforce consistent linebreak style for operators.
@@ -1176,7 +1176,7 @@ module.exports = {
    *
    * https://eslint.org/docs/rules/semi-style.
    */
-  "semi-style": ["error", "last"],
+  "semi-style": [ "error", "last" ],
 
   /**
    * Require object keys to be sorted.
@@ -1245,7 +1245,7 @@ module.exports = {
    *
    * https://eslint.org/docs/rules/space-in-parens.
    */
-  "space-in-parens": ["error", "never"],
+  "space-in-parens": [ "error", "never" ],
 
   /**
    * Require spacing around infix operators.
@@ -1317,7 +1317,7 @@ module.exports = {
    *
    * https://eslint.org/docs/rules/template-tag-spacing.
    */
-  "template-tag-spacing": ["error", "never"],
+  "template-tag-spacing": [ "error", "never" ],
 
   /**
    * Require or disallow Unicode byte order mark (BOM).
@@ -1326,7 +1326,7 @@ module.exports = {
    *
    * https://eslint.org/docs/rules/unicode-bom.
    */
-  "unicode-bom": ["error", "never"],
+  "unicode-bom": [ "error", "never" ],
 
   /**
    * Require parenthesis around regex literals.
@@ -1347,7 +1347,7 @@ module.exports = {
    *
    * https://eslint.org/docs/rules/strict.
    */
-  strict: ["error", "never"],
+  strict: [ "error", "never" ],
 
   /**
    * Require return statements after callbacks.
@@ -1360,7 +1360,7 @@ module.exports = {
    */
   "callback-return": [
     "off",
-    ["callback", "cb", "errback", "eb", "next", "fn", "func", "f"],
+    [ "callback", "cb", "errback", "eb", "next", "fn", "func", "f" ],
   ],
 
   /**
@@ -1379,7 +1379,7 @@ module.exports = {
    *
    * https://eslint.org/docs/rules/handle-callback-err.
    */
-  "handle-callback-err": ["error", "err"],
+  "handle-callback-err": [ "error", "err" ],
 
   /**
    * Disallow use of the Buffer() constructor.
@@ -1649,7 +1649,7 @@ module.exports = {
    *
    * https://eslint.org/docs/rules/no-inner-declarations.
    */
-  "no-inner-declarations": ["error", "functions"],
+  "no-inner-declarations": [ "error", "functions" ],
 
   /**
    * Disallow invalid regular expression strings in RegExp constructors.
@@ -1659,7 +1659,7 @@ module.exports = {
   "no-invalid-regexp": [
     "error",
     {
-      allowConstructorFlags: ["u", "y"],
+      allowConstructorFlags: [ "u", "y" ],
     },
   ],
 
@@ -1860,7 +1860,7 @@ module.exports = {
    *
    * https://eslint.org/docs/rules/curly.
    */
-  curly: ["error", "all"],
+  curly: [ "error", "all" ],
 
   /**
    * Require default cases in switch statements.
@@ -1884,7 +1884,7 @@ module.exports = {
    *
    * https://eslint.org/docs/rules/dot-location.
    */
-  "dot-location": ["error", "property"],
+  "dot-location": [ "error", "property" ],
 
   /**
    * Enforce dot notation whenever possible.
@@ -1906,7 +1906,7 @@ module.exports = {
    *
    * https://eslint.org/docs/rules/eqeqeq.
    */
-  eqeqeq: ["error", "always"],
+  eqeqeq: [ "error", "always" ],
 
   /**
    * Require for-in loops to include an if statement.
@@ -1920,7 +1920,7 @@ module.exports = {
    *
    * https://eslint.org/docs/rules/max-classes-per-file.
    */
-  "max-classes-per-file": ["error", 5],
+  "max-classes-per-file": [ "error", 5 ],
 
   /**
    * Disallow the use of alert, confirm, and prompt.
@@ -2371,7 +2371,7 @@ module.exports = {
    *
    * https://eslint.org/docs/rules/no-return-assign.
    */
-  "no-return-assign": ["error", "always"],
+  "no-return-assign": [ "error", "always" ],
 
   /**
    * Disallow unnecessary return await.
@@ -2510,7 +2510,7 @@ module.exports = {
   "no-warning-comments": [
     "off",
     {
-      terms: ["todo", "fix"],
+      terms: [ "todo", "fix" ],
       location: "start",
     },
   ],
@@ -2544,7 +2544,7 @@ module.exports = {
    *
    * https://eslint.org/docs/rules/radix.
    */
-  radix: ["error", "as-needed"],
+  radix: [ "error", "as-needed" ],
 
   /**
    * Disallow async functions which have no await expression.
@@ -2607,7 +2607,7 @@ module.exports = {
    *
    * https://eslint.org/docs/rules/arrow-body-style.
    */
-  "arrow-body-style": ["error", "as-needed"],
+  "arrow-body-style": [ "error", "as-needed" ],
 
   /**
    * Require parentheses around arrow function arguments.
@@ -2783,7 +2783,7 @@ module.exports = {
    *
    * https://eslint.org/docs/rules/object-shorthand.
    */
-  "object-shorthand": ["off", "consistent-as-needed"],
+  "object-shorthand": [ "off", "consistent-as-needed" ],
 
   /**
    * Require using arrow functions for callbacks.
@@ -2883,7 +2883,7 @@ module.exports = {
    *
    * https://eslint.org/docs/rules/rest-spread-spacing.
    */
-  "rest-spread-spacing": ["error", "never"],
+  "rest-spread-spacing": [ "error", "never" ],
 
   /**
    * Enforce sorted import declarations within modules.
@@ -2898,7 +2898,7 @@ module.exports = {
       ignoreCase: false,
       ignoreDeclarationSort: true,
       ignoreMemberSort: true,
-      memberSyntaxSortOrder: ["none", "all", "multiple", "single"],
+      memberSyntaxSortOrder: [ "none", "all", "multiple", "single" ],
     },
   ],
 
@@ -2917,7 +2917,7 @@ module.exports = {
    *
    * https://eslint.org/docs/rules/template-curly-spacing.
    */
-  "template-curly-spacing": ["error", "never"],
+  "template-curly-spacing": [ "error", "never" ],
 
   /**
    * Require or disallow spacing around the * in yield* expressions.
@@ -2975,7 +2975,7 @@ module.exports = {
    *
    * https://eslint.org/docs/rules/no-restricted-globals.
    */
-  "no-restricted-globals": ["error", "isFinite", "isNaN"].concat(
+  "no-restricted-globals": [ "error", "isFinite", "isNaN" ].concat(
     confusingBrowserGlobals
   ),
 

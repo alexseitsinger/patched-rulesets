@@ -251,7 +251,7 @@ module.exports = {
    * Consistent with type definition either interface or type
    * (Fixable)
    */
-  "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
+  "@typescript-eslint/consistent-type-definitions": [ "error", "interface" ],
 
   /**
    * Require explicit return types on functions and class methods
@@ -293,12 +293,12 @@ module.exports = {
    *
    * - patches according to eslint-config-prettier/@typescript-eslint
    */
-  "@typescript-eslint/func-call-spacing": ["error", "never"],
+  "@typescript-eslint/func-call-spacing": [ "error", "never" ],
 
   /**
    * Enforces naming of generic type variables
    */
-  "@typescript-eslint/generic-type-naming": ["error", "^([A-Z]([a-z]+)?)+$"],
+  "@typescript-eslint/generic-type-naming": [ "error", "^([A-Z]([a-z]+)?)+$" ],
 
   /**
    * Enforce consistent indentation
@@ -322,7 +322,7 @@ module.exports = {
         let: 2,
         const: 3,
       },
-      outerIIFEBody: 0,
+      outerIIFEBody: 1,
       MemberExpression: 1,
       FunctionDeclaration: {
         parameters: "first",
@@ -606,7 +606,7 @@ module.exports = {
     "error",
     {
       allowDestructuring: true,
-      allowedNames: ["self", "root"],
+      allowedNames: [ "self", "root" ],
     },
   ],
 
@@ -818,7 +818,7 @@ module.exports = {
   "@typescript-eslint/promise-function-async": [
     "off",
     {
-      allowedPromiseNames: ["Thenable", "p"],
+      allowedPromiseNames: [ "Thenable", "p" ],
       checkArrowFunctions: true,
       checkFunctionDeclarations: true,
       checkFunctionExpressions: true,
@@ -879,7 +879,7 @@ module.exports = {
   /**
    * Rules for awaiting returned promises
    */
-  "@typescript-eslint/return-await": ["error", "in-try-catch"],
+  "@typescript-eslint/return-await": [ "error", "in-try-catch" ],
 
   /**
    * Require or disallow semicolons instead of ASI
