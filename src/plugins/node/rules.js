@@ -152,9 +152,8 @@ module.exports = {
     "error",
     {
       /*
-       *  This rule reads from the 'engines' field in package.json, but can be overridden here.
-       * version: ">=8.0.0",
-       *  Items that should be omitted from this rule.
+       *  This rule reads from the 'engines' field in package.json, but can be
+       *  overridden here.
        */
       ignoreModuleItems: [],
       ignoreGlobalItems: [],
@@ -199,7 +198,7 @@ module.exports = {
   ],
 
   /**
-   * Perfer either the global or required version of modules.
+   * Prefer either the global or required version of modules.
    */
   "node/prefer-global/buffer": ["error", "always"],
   "node/prefer-global/console": ["error", "always"],
