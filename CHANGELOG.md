@@ -1,3 +1,7 @@
+<a name="v0.3.2"></a>
+## [v0.3.2](https://github.com/alexseitsinger/patched-rulesets/compare/v0.3.1...v0.3.2) (2020-03-16)
+
+
 <a name="v0.3.1"></a>
 ## [v0.3.1](https://github.com/alexseitsinger/patched-rulesets/compare/v0.3.0...v0.3.1) (2020-03-16)
 
