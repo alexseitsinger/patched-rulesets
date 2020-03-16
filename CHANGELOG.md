@@ -1,3 +1,10 @@
+<a name="v0.3.1"></a>
+## [v0.3.1](https://github.com/alexseitsinger/patched-rulesets/compare/v0.3.0...v0.3.1) (2020-03-16)
+
+### Bug Fixes
+- Fixes normalize for jsx-quotes. ([c061dd3](https://github.com/alexseitsinger/patched-rulesets/commit/c061dd31eaa5a22916a0c63486db8ec83a69e82e))
+
+
 <a name="v0.3.0"></a>
 ## [v0.3.0](https://github.com/alexseitsinger/patched-rulesets/compare/v0.2.0...v0.3.0) (2020-03-16)
 
