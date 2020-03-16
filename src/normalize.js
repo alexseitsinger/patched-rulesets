@@ -50,6 +50,16 @@ function normalizeMaxLength(
       ignoreRegExpLiterals: true,
     },
   ])
+
+  normalizeEnabledRule(rules, "id-length", [
+    "error",
+    {
+      min: 1,
+      max: maxLength,
+      properties: "always",
+      exceptions: [],
+    },
+  ])
 }
 
 function normalizeSemiRules(rules, value = DEFAULT_VALUES.semi) {
