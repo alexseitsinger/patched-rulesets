@@ -1,3 +1,17 @@
+<a name="v0.3.0"></a>
+## [v0.3.0](https://github.com/alexseitsinger/patched-rulesets/compare/v0.2.0...v0.3.0) (2020-03-16)
+
+### Code Refactoring
+- Re-enables some rules (patched later). ([967c70c](https://github.com/alexseitsinger/patched-rulesets/commit/967c70c048d9416dc838fc115da7f9da92ee2a9d))
+- Re-enables some rules (patched later). ([7405af5](https://github.com/alexseitsinger/patched-rulesets/commit/7405af5eb1f1b01f3e8937ab67d22edd06c49f88))
+- Re-enalbes rule. ([b01e7df](https://github.com/alexseitsinger/patched-rulesets/commit/b01e7df545ddbca8fa345b7e6a0b81012a28cae5))
+- Renames plugin folder correctly. ([35d7f06](https://github.com/alexseitsinger/patched-rulesets/commit/35d7f06d2b2851708b6917ff2fc4af6da386a5de))
+
+### Features
+- Adds more rule normalizers. ([4dec672](https://github.com/alexseitsinger/patched-rulesets/commit/4dec6726197396fe1c0e8ce04964f3fef56bad61))
+- Adds new normalizer settings. ([9882841](https://github.com/alexseitsinger/patched-rulesets/commit/988284188ce2d6313b1e23be6ab6b57c07519f8f))
+
+
 <a name="v0.2.0"></a>
 ## [v0.2.0](https://github.com/alexseitsinger/patched-rulesets/compare/v0.1.0...v0.2.0) (2020-03-12)
 
