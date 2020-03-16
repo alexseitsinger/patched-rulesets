@@ -1,12 +1,4 @@
-// simple-import-sort plugin
-
-/**
- * NOTE:
- * This config shuld be listed AFTER 'import' and 'eslint' because it patches
- * rules from those configs.
- */
-
-const projectDirs = "^([sS]rc|[aA]pp|[cC]ore|[sS]ite|[pP]ages|[tT]ests)(/.*|$)"
+const projectDirectories = "^([sS]rc|[aA]pp|[cC]ore|[sS]ite|[pP]ages|[tT]ests)(/.*|$)"
 const reactHotLoader = "^react-hot-loader(/root)?$"
 const builtins = [
   "assert",
@@ -53,23 +45,29 @@ module.exports = {
     "error",
     {
       groups: [
-        // Make sure out polyfills are always imported first.
-        // Side effect imports.
+        /*
+         * Make sure out polyfills are always imported first.
+         * Side effect imports.
+         */
         ["^\\u0000"],
 
-        // Node.js builtins. You could also generate this regex if you use a `.js` config.
-        // For example: `^(${require("module").builtinModules.join("|")})(/|$)`
+        /*
+         * Node.js builtins. You could also generate this regex if you use a `.js` config.
+         * For example: `^(${require("module").builtinModules.join("|")})(/|$)`
+         */
         [`^(${builtins.join("|")})(/.*|$)`],
 
-        // React hot loader shoudl always be imported before react since it
-        // patches it.
+        /*
+         * React hot loader should always be imported before react since it
+         * patches it.
+         */
         [reactHotLoader],
 
         // Packages. `react` related packages come first.
         [`^react(?!${reactHotLoader})`, "^prop-types", "^@?\\w"],
 
         // Internal packages.
-        [projectDirs],
+        [projectDirectories],
 
         // Other relative imports. Put same-folder imports and `.` last.
         [("^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$")],
