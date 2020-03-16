@@ -23,7 +23,7 @@ module.exports = {
    * - After moving to TypeScript, we no longer use PropTypes, so no need to keep this
    *   rule disabled (at least from here).
    */
-  "import/exports-last": "error",
+  "import/exports-last": "off",
 
   /**
    * Report repeated import of the same module in multiple places.
@@ -84,7 +84,7 @@ module.exports = {
   "import/newline-after-import": [
     "error",
     {
-      count: 2,
+      count: 1,
     },
   ],
 
@@ -120,7 +120,7 @@ module.exports = {
    *   continue to use a larger number of unassigned modules.
    * - Sometimes, we import CSS as modules without assigning them a name. So,
    *   disable this rule completely.
-   * - Continnue to fill this rule with the patches we use so we don't need tot idsable
+   * - Continue to fill this rule with the patches we use so we don't need to disable
    *   this rule completely.
    */
   "import/no-unassigned-import": [
@@ -131,6 +131,8 @@ module.exports = {
         "url-search-params-polyfill",
         "beautiful-react-redux/patch",
         "@babel/polyfill",
+        "both",
+        "polyfills",
         "**/register/**",
         "**/*.{jpeg,jpg,gif,png,ico,css}",
       ],
@@ -469,24 +471,25 @@ module.exports = {
     "error",
     {
       unusedExports: true,
-
       /*
-       * Patches because will throw annoyiung errors in entry points and config
+       * Patches because will throw annoying errors in entry points and config
        * files and there isn't an option to ignore those files here..
        */
       missingExports: false,
-
-      /*
-       * Src: [],
-       *  ignoreExports: [
-       *  "webpack.config.js",
-       *  "jest.config.js",
-       *  "jest.setup.js",
-       *  "jest.assetTransformer.js",
-       *  "babel.config.js"
-       *  ]
-       *
-       */
+      src: [],
+      ignoreExports: [
+        "webpack.config.js",
+        "webpack.config.dev.js",
+        "webpack.config.development.js",
+        "webpack.config.prod.js",
+        "webpack.config.production.js",
+        "webpack.config.stage.js",
+        "webpack.config.staging.js",
+        "jest.config.js",
+        "jest.setup.js",
+        "jest.assetTransformer.js",
+        "babel.config.js",
+      ]
     },
   ],
 }
