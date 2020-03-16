@@ -2,6 +2,8 @@ const deepMerge = require("deepmerge")
 const uniq = require("lodash/uniq")
 const { groups } = require("./groups")
 const { normalizeRules } = require("./normalize")
+
+
 const { core, json, prose, react, redux, testing, typescript } = groups
 
 const ruleOrder = [
@@ -165,7 +167,7 @@ function createConfig({ pluginNames, useEslint = true }) {
   }
 
   /**
-   * We orgnaize each ruleset and then apply them in order so that overridden
+   * We organize each ruleset and then apply them in order so that overridden
    * rules are correctly used.
    */
 
@@ -254,6 +256,11 @@ function createConfig({ pluginNames, useEslint = true }) {
   normalizeRules(config, {
     semi: "never",
     spaces: 2,
+    braceStyle: "stroustrup",
+    quotes: "double",
+    ecmaVersion: "8.0.0",
+    nodeVersion: "8.0.0",
+    maxLength: 88,
   })
 
   /**
