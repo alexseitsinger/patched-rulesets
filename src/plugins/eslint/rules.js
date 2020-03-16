@@ -276,14 +276,21 @@ module.exports = {
 
   /**
    * Enforce minimum and maximum identifier lengths.
+   * (Normalized)
    *
    * https://eslint.org/docs/rules/id-length.
    */
   "id-length": [
     "error",
     {
-      min: 2,
-      max: 78,
+      /**
+       * We sometimes use single letter variables, so make sure the minimum is 1.
+       */
+      min: 1,
+      /**
+       * This should be the same value as max-len.
+       */
+      max: 88,
       properties: "always",
       exceptions: [],
     },
@@ -308,11 +315,12 @@ module.exports = {
 
   /**
    * Enforce the location of arrow function bodies.
+   * (Fixable)
    *
-   * NOTE: This wil force the line to exceed the max-len (or printWidth with
-   *       prettier, so either disable this rule or use 'below'.
-   *
-   * (fixable).
+   * NOTES:
+   * - This wil force the line to exceed the max-len (or printWidth with
+   *   prettier, so either disable this rule or use 'below'.
+   * - This fucks up formatting with max-len, so just disable it completely.
    *
    * https://eslint.org/docs/rules/implicit-arrow-linebreak.
    */
@@ -320,10 +328,8 @@ module.exports = {
 
   /**
    * Enforce consistent indentation.
-   *
-   * (fixable).
-   *
-   * Enabled to ensure the stroustrup blocks are formatted correctly.
+   * (Fixable)
+   * (Normalized)
    *
    * https://eslint.org/docs/rules/indent.
    */
