@@ -1,28 +1,14 @@
-const configs = require("../configs")
+const configs = require("../src/configs")
 const linter = require("./linter")
 
-describe("Validate eslint configs", () => {
-  it("should lint using core preset", () => {
-    const output = linter("./samples/base.js", configs.core)
+const configNames = Object.keys(configs)
 
-    expect(output.results[0].messages).toStrictEqual([])
-  })
-
-  it("should lint using defaults preset", () => {
-    const output = linter("./samples/base.js", configs.defaults)
-
-    expect(output.results[0].messages).toStrictEqual([])
-  })
-
-  it("should lint using javscript preset", () => {
-    const output = linter("./samples/base.js", configs.javascript)
-
-    expect(output.results[0].messages).toStrictEqual([])
-  })
-
-  it("should lint using javscriptReact preset", () => {
-    const output = linter("./samples/base.js", configs.javascriptReact)
-
-    expect(output.results[0].messages).toStrictEqual([])
+describe("configs", () => {
+  [ "nodeOnly", "js" ].forEach(configName => {
+    it(`should lint use the '${configName}' config`, () => {
+      const config = configs[configName]
+      const report = linter(config)
+      expect(report.results[0].messages).toStrictEqual([])
+    })
   })
 })
