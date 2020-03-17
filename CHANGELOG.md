@@ -1,3 +1,10 @@
+<a name="v0.6.1"></a>
+## [v0.6.1](https://github.com/alexseitsinger/patched-rulesets/compare/v0.6.0...v0.6.1) (2020-03-17)
+
+### Bug Fixes
+- Removes console statements. ([905bf9b](https://github.com/alexseitsinger/patched-rulesets/commit/905bf9b95e81799dce9128b77387475a50c06f59))
+
+
 <a name="v0.6.0"></a>
 ## [v0.6.0](https://github.com/alexseitsinger/patched-rulesets/compare/v0.5.0...v0.6.0) (2020-03-17)
 
