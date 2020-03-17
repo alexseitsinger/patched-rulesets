@@ -10,19 +10,20 @@ const DEFAULT_VALUES = {
   nodeVersion: process && process.version,
 }
 
-function isDisabledRule(lintLevel) {
-  return DISABLED_RULE_VALUES.includes(lintLevel)
-}
+const ENABLED_RULE_LEVELS = [ "warn", 1, "error", 2 ]
 
 function normalizeEnabledRule(rules, ruleName, value) {
   if (ruleName in rules) {
-    const [lintLevel] = rules[ruleName]
-
-    if (isDisabledRule(lintLevel)) {
-      return
+    const opt = rules[ruleName]
+    if (Array.isArray(opt)) {
+      const [lintLevel] = opt
+      if (ENABLED_RULE_LEVELS.includes(lintLevel)) {
+        rules[ruleName] = value
+      }
     }
-
-    rules[ruleName] = value
+    if (ENABLED_RULE_LEVELS.includes(opt)) {
+      rules[ruleName] = value
+    }
   }
 }
 
