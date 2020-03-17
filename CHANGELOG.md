@@ -1,3 +1,10 @@
+<a name="v0.7.0"></a>
+## [v0.7.0](https://github.com/alexseitsinger/patched-rulesets/compare/v0.6.1...v0.7.0) (2020-03-17)
+
+### Code Refactoring
+- Changes rule check. ([40fb9d0](https://github.com/alexseitsinger/patched-rulesets/commit/40fb9d0a2c67ce20e0dc023956877b071b4aba4b))
+
+
 <a name="v0.6.1"></a>
 ## [v0.6.1](https://github.com/alexseitsinger/patched-rulesets/compare/v0.6.0...v0.6.1) (2020-03-17)
 
