@@ -1,4 +1,7 @@
 module.exports = {
+  env: {
+    es6: true,
+  },
   settings: {
     "import/core-modules": ["fs", "path", "child_process"],
     "import/ignore": ["node_modules", ".yalc"],

@@ -1,8 +1,5 @@
 module.exports = {
-  javascript: {
-    //..
-  },
-  typescript: {
-    //...
+  env: {
+    es6: true,
   },
 }
