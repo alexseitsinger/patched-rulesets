@@ -69,7 +69,7 @@ module.exports = {
       groups: [
         ["builtin"],
         ["external"],
-        ["internal", "parent", "sibling", "index", "unknown"],
+        [ "internal", "parent", "sibling", "index", "unknown" ],
       ],
       "newlines-between": "always-and-inside-groups",
     },
@@ -188,7 +188,7 @@ module.exports = {
   "import/dynamic-import-chunkname": [
     "error",
     {
-      importFunctions: ["importComponent", "lazy", "React.lazy"],
+      importFunctions: [ "importComponent", "lazy", "React.lazy" ],
       webpackChunknameFormat: "[a-zA-Z0-9-/_]+",
     },
   ],
@@ -371,7 +371,7 @@ module.exports = {
   "import/no-nodejs-modules": [
     "error",
     {
-      allow: ["fs", "path", "child_process"],
+      allow: [ "fs", "path", "child_process", "os" ],
     },
   ],
 
