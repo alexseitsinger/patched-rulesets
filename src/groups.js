@@ -15,7 +15,7 @@ const groups = {
     "sort-destructure-keys",
     "promise",
   ],
-  react: ["react", "react-hooks", "react-perf"],
+  react: [ "react", "react-hooks", "react-perf" ],
   reactES6: ["better-styled-components"],
   redux: [ "react-redux", "redux-saga" ],
   typescript: [ "@typescript-eslint/eslint-plugin", "tsdoc" ],
@@ -34,8 +34,6 @@ function getPlugins({ names = [], isES6 = false }) {
     .map(n => groupsWithoutCore.includes(n))
     .includes(true)
 
-  console.log("isES6: ", isES6)
-
   let plugins = [
     ...(isWithCore ? groups.core : []),
     ...(isES6 ? groups.coreES6 : []),
@@ -45,7 +43,7 @@ function getPlugins({ names = [], isES6 = false }) {
     if (groupNames.includes(groupName)) {
       plugins = [ ...plugins, ...groups[groupName] ]
       if (groupName === "react" && isES6) {
-        plugins = [...plugins, ...groups.reactES6]
+        plugins = [ ...plugins, ...groups.reactES6 ]
       }
     }
   })
