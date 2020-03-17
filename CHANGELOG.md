@@ -1,3 +1,21 @@
+<a name="v0.6.0"></a>
+## [v0.6.0](https://github.com/alexseitsinger/patched-rulesets/compare/v0.5.0...v0.6.0) (2020-03-17)
+
+### Bug Fixes
+- Fixes feature normalize. ([7b914e1](https://github.com/alexseitsinger/patched-rulesets/commit/7b914e1ceb243b2032b5bc683373139d784bbcbf))
+
+### Code Refactoring
+- Adds os to allowed builtins. ([038c2dd](https://github.com/alexseitsinger/patched-rulesets/commit/038c2ddf4695f39ed0e1b7f14fa06a6ea666e0a5))
+- Makes sep groups for ES6 plugins. ([4586380](https://github.com/alexseitsinger/patched-rulesets/commit/4586380f5c4bb21e9d87d81a236dc3fabae6cbed))
+- Takes patchedrc config. ([4a761ad](https://github.com/alexseitsinger/patched-rulesets/commit/4a761ad5d1a66a91cc5792065670018abe0084bc))
+- Updates api for passing config. ([3bcdc1b](https://github.com/alexseitsinger/patched-rulesets/commit/3bcdc1b3425bf13d88719156324938147a054f8e))
+
+### Features
+- Adds correct env settings. ([9eb149e](https://github.com/alexseitsinger/patched-rulesets/commit/9eb149ee406ed4915a44d2b9911d6471225995cc))
+- Adds missing patch for eslint. ([8c655a2](https://github.com/alexseitsinger/patched-rulesets/commit/8c655a294afde9d908bb9040cd0c0ad5589d53d9))
+- Adds nodeOnly preset. ([148c592](https://github.com/alexseitsinger/patched-rulesets/commit/148c592b08f403525e070f5d660949e4b5382f33))
+
+
 <a name="v0.5.0"></a>
 ## [v0.5.0](https://github.com/alexseitsinger/patched-rulesets/compare/v0.4.1...v0.5.0) (2020-03-16)
 
