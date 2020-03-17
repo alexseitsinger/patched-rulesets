@@ -1,6 +1,6 @@
 {
   "name": "patched-rulesets",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Rulesets for the Patched linter and formatter",
   "author": {
     "email": "software@alexseitsinger.com",
