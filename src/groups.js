@@ -14,18 +14,18 @@ const groups = {
      * "prettier",
      */
   ],
-  react: ["react", "react-perf", "react-hooks", "better-styled-components"],
-  redux: ["react-redux", "redux-saga"],
-  typescript: ["@typescript-eslint/eslint-plugin", "tsdoc"],
+  react: [ "react", "react-perf", "react-hooks", "better-styled-components" ],
+  redux: [ "react-redux", "redux-saga" ],
+  typescript: [ "@typescript-eslint/eslint-plugin", "tsdoc" ],
   safety: ["security"],
-  testing: ["jest", "jest-formatting"],
+  testing: [ "jest", "jest-formatting" ],
   json: ["json"],
   package: ["package-json"],
-  prose: ["spellcheck", "markdown"],
+  prose: [ "spellcheck", "markdown" ],
 }
 
 const groupNames = Object.keys(groups)
-const groupsWithoutCore = ["json", "package-json"]
+const groupsWithoutCore = [ "json", "package-json" ]
 
 function getPlugins(names) {
   const filteredNames = names.filter(n => n.toLowerCase() !== "core")
@@ -37,7 +37,7 @@ function getPlugins(names) {
 
   filteredNames.forEach(groupName => {
     if (groupNames.includes(groupName)) {
-      plugins = [...plugins, ...groups[groupName]]
+      plugins = [ ...plugins, ...groups[groupName] ]
     }
   })
 

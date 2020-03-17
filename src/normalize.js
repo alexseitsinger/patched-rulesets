@@ -7,8 +7,7 @@ const DEFAULT_VALUES = {
   spaces: 2,
   braceStyle: "stroustrup",
   maxLength: 88,
-  ecmaVersion: "8.0.0",
-  nodeVersion: "12.0.0",
+  nodeVersion: process && process.version,
 }
 
 function isDisabledRule(lintLevel) {
@@ -134,7 +133,7 @@ function normalizeBraceStyleRules(rules, value = DEFAULT_VALUES.braceStyle) {
       value,
       {
         allowSingleLine: false,
-      }
+      },
     ])
   })
 }
@@ -169,37 +168,30 @@ function normalizeQuotesRules(rules, value = DEFAULT_VALUES.quotes) {
   }
 }
 
-function normalizeFeatureVersions(rules, nodeVersion = DEFAULT_VALUES.nodeVersion, ecmaVersion = DEFAULT_VALUES.ecmaVersion) {
+function normalizeFeatureVersions(rules, nodeVersion = DEFAULT_VALUES.nodeVersion) {
   /**
    * The version number is read from package.json, but it can also be specified here.
    */
   const nodeVersionRules = [
     "node/no-unsupported-features/node-builtins",
-  ]
-  nodeVersionRules.forEach(ruleName => {
-    normalizeEnabledRule(rules, ruleName, [
-      "error", {
-        version: `>=${nodeVersion}`,
-        ignores: [],
-      },
-    ])
-  })
-
-  const ecmaVersionRules = [
     "node/no-unsupported-features/es-builtins",
     "node/no-unsupported-features/es-syntax",
   ]
-  ecmaVersionRules.forEach(ruleName => {
+  nodeVersionRules.forEach(ruleName => {
     normalizeEnabledRule(rules, ruleName, [
-      "error", {
-        version: `>=${ecmaVersion}`,
-        ignores: [],
-      }
+      "error",
+      {
+        version: `>=${nodeVersion}`,
+        ignores: [ruleName.contains("es-builtins") ? "module" : ""],
+      },
     ])
   })
 }
 
-function normalizeRules(config, { braceStyle, ecmaVersion, maxLength, nodeVersion, quotes, semi, spaces }) {
+function normalizeRules(
+  config,
+  { braceStyle, maxLength, nodeVersion, quotes, semi, spaces }
+) {
   const { rules } = config
 
   normalizeIndentRules(rules, spaces)
@@ -207,7 +199,7 @@ function normalizeRules(config, { braceStyle, ecmaVersion, maxLength, nodeVersio
   normalizeBraceStyleRules(rules, braceStyle)
   normalizeQuotesRules(rules, quotes)
   normalizeMaxLength(rules, maxLength, spaces)
-  normalizeFeatureVersions(rules, nodeVersion, ecmaVersion)
+  normalizeFeatureVersions(rules, nodeVersion)
 }
 
 module.exports = {

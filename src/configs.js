@@ -12,7 +12,7 @@ const jsReact = createConfig({
 })
 
 const jsReactRedux = createConfig({
-  pluginNames: getPlugins(["react", "redux"]),
+  pluginNames: getPlugins([ "react", "redux" ]),
   useEslint: true,
 })
 
@@ -22,12 +22,12 @@ const ts = createConfig({
 })
 
 const tsReact = createConfig({
-  pluginNames: getPlugins(["typescript", "react"]),
+  pluginNames: getPlugins([ "typescript", "react" ]),
   useEslint: true,
 })
 
 const tsReactRedux = createConfig({
-  pluginNames: getPlugins(["typescript", "react", "redux"]),
+  pluginNames: getPlugins([ "typescript", "react", "redux" ]),
   useEslint: true,
 })
 
@@ -37,27 +37,27 @@ const mdJs = createConfig({
 })
 
 const mdJsReact = createConfig({
-  pluginNames: getPlugins(["react", "markdown"]),
+  pluginNames: getPlugins([ "react", "markdown" ]),
   useEslint: true,
 })
 
 const mdJsReactRedux = createConfig({
-  pluginNames: getPlugins(["react", "redux", "markdown"]),
+  pluginNames: getPlugins([ "react", "redux", "markdown" ]),
   useEslint: true,
 })
 
 const mdTs = createConfig({
-  pluginNames: getPlugins(["typescript", "markdown"]),
+  pluginNames: getPlugins([ "typescript", "markdown" ]),
   useEslint: true,
 })
 
 const mdTsReact = createConfig({
-  pluginNames: getPlugins(["typescript", "react", "markdown"]),
+  pluginNames: getPlugins([ "typescript", "react", "markdown" ]),
   useEslint: true,
 })
 
 const mdTsReactRedux = createConfig({
-  pluginNames: getPlugins(["typescript", "react", "redux", "markdown"]),
+  pluginNames: getPlugins([ "typescript", "react", "redux", "markdown" ]),
   useEslint: true,
 })
 
