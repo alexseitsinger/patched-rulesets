@@ -81,7 +81,7 @@ function normalizeSemiRules(rules, value = DEFAULT_VALUES.semi) {
   ])
 }
 
-function normalizeIndentRules(rules, spaces = DEFAULT_VALUES.indent) {
+function normalizeIndentRules(rules, spaces = DEFAULT_VALUES.spaces) {
   const indentRules = [ "indent", "@typescript-eslint/indent" ]
   const indentReactRules = [ "react/jsx-indent-props", "react/jsx-indent" ]
 
@@ -182,7 +182,7 @@ function normalizeFeatureVersions(rules, nodeVersion = DEFAULT_VALUES.nodeVersio
       "error",
       {
         version: `>=${nodeVersion}`,
-        ignores: [ruleName.contains("es-builtins") ? "module" : ""],
+        ignores: [ruleName.includes("/es-syntax") ? "module" : ""],
       },
     ])
   })
