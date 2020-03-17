@@ -3,7 +3,6 @@ const uniq = require("lodash/uniq")
 const { groups } = require("./groups")
 const { normalizeRules } = require("./normalize")
 
-
 const { core, json, prose, react, redux, testing, typescript } = groups
 
 const ruleOrder = [
@@ -154,7 +153,7 @@ function collectPatches(ruleSets, forPlugin) {
     }, {})
 }
 
-function createConfig({ pluginNames, useEslint = true }) {
+function createConfig({ pluginNames, useEslint = true, patchedRules = {} }) {
   const plugins = sortPlugins(pluginNames)
 
   const isTypeScript = usesTypescript(plugins)
@@ -253,15 +252,7 @@ function createConfig({ pluginNames, useEslint = true }) {
    *
    * In the future, perhaps detect this at runtime?
    */
-  normalizeRules(config, {
-    semi: "never",
-    spaces: 2,
-    braceStyle: "stroustrup",
-    quotes: "double",
-    ecmaVersion: "8.0.0",
-    nodeVersion: "8.0.0",
-    maxLength: 88,
-  })
+  normalizeRules(config, patchedRules)
 
   /**
    * Return the final config
