@@ -1,6 +1,7 @@
 /* eslint-disable no-param-reassign */
+const readPkgUp = require("read-pkg-up")
 
-const DISABLED_RULE_VALUES = [ "off", 0 ]
+const ENABLED_RULE_LEVELS = [ "warn", 1, "error", 2 ]
 const DEFAULT_VALUES = {
   quotes: "double",
   semi: "never",
@@ -10,7 +11,70 @@ const DEFAULT_VALUES = {
   nodeVersion: process && process.version,
 }
 
-const ENABLED_RULE_LEVELS = [ "warn", 1, "error", 2 ]
+const getReactVersion = async () => {
+  const { packageJson } = await readPkgUp()
+  const keys = [
+    "dependencies",
+    "peerDepedencies",
+    "optionalDependencies",
+    "devDependencies",
+  ]
+  let version = "0.0.0"
+  keys.forEach(key => {
+    if (version !== "0.0.0") {
+      return
+    }
+    if (key in packageJson) {
+      const deps = packageJson[key]
+      Object.keys(deps).forEach(depName => {
+        if (depName === "react") {
+          version = deps[depName]
+        }
+      })
+    }
+  })
+
+  return version
+}
+
+const getReactVersionSync = () => {
+  const { packageJson } = readPkgUp.sync()
+  const keys = [
+    "dependencies",
+    "peerDepedencies",
+    "optionalDependencies",
+    "devDependencies",
+  ]
+  let version = "0.0.0"
+  keys.forEach(key => {
+    if (version !== "0.0.0") {
+      return
+    }
+    if (key in packageJson) {
+      const deps = packageJson[key]
+      Object.keys(deps).forEach(depName => {
+        if (depName === "react") {
+          version = deps[depName]
+        }
+      })
+    }
+  })
+
+  return version
+}
+
+const normalizeImportSettings = config => {
+  const isReact = config.plugins.includes("react")
+  if (isReact) {
+    config.settings = {
+      ...config.settings,
+      react: {
+        version: getReactVersionSync(),
+      },
+    }
+  }
+}
+
 
 function normalizeEnabledRule(rules, ruleName, value) {
   if (ruleName in rules) {
@@ -201,6 +265,7 @@ function normalizeRules(
   normalizeQuotesRules(rules, quotes)
   normalizeMaxLength(rules, maxLength, spaces)
   normalizeFeatureVersions(rules, nodeVersion)
+  normalizeImportSettings(config)
 }
 
 module.exports = {
