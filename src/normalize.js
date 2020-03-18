@@ -12,53 +12,57 @@ const DEFAULT_VALUES = {
 }
 
 const getReactVersion = async () => {
-  const { packageJson } = await readPkgUp()
+  const output = await readPkgUp()
   const keys = [
     "dependencies",
     "peerDepedencies",
     "optionalDependencies",
     "devDependencies",
   ]
-  let version = "0.0.0"
-  keys.forEach(key => {
-    if (version !== "0.0.0") {
-      return
-    }
-    if (key in packageJson) {
-      const deps = packageJson[key]
-      Object.keys(deps).forEach(depName => {
-        if (depName === "react") {
-          version = deps[depName]
-        }
-      })
-    }
-  })
+  let version = "detect"
+  if ("packageJson" in output) {
+    keys.forEach(key => {
+      if (version !== "detect") {
+        return
+      }
+      if (key in output.packageJson) {
+        const deps = output.packageJson[key]
+        Object.keys(deps).forEach(depName => {
+          if (depName === "react") {
+            version = deps[depName]
+          }
+        })
+      }
+    })
+  }
 
   return version
 }
 
 const getReactVersionSync = () => {
-  const { packageJson } = readPkgUp.sync()
+  const output = readPkgUp.sync()
   const keys = [
     "dependencies",
     "peerDepedencies",
     "optionalDependencies",
     "devDependencies",
   ]
-  let version = "0.0.0"
-  keys.forEach(key => {
-    if (version !== "0.0.0") {
-      return
-    }
-    if (key in packageJson) {
-      const deps = packageJson[key]
-      Object.keys(deps).forEach(depName => {
-        if (depName === "react") {
-          version = deps[depName]
-        }
-      })
-    }
-  })
+  let version = "detect"
+  if ("packageJson" in output) {
+    keys.forEach(key => {
+      if (version !== "detect") {
+        return
+      }
+      if (key in output.packageJson) {
+        const deps = output.packageJson[key]
+        Object.keys(deps).forEach(depName => {
+          if (depName === "react") {
+            version = deps[depName]
+          }
+        })
+      }
+    })
+  }
 
   return version
 }
