@@ -1,3 +1,24 @@
+<a name="v0.8.3"></a>
+## [v0.8.3](https://github.com/alexseitsinger/patched-rulesets/compare/v0.8.2...v0.8.3) (2020-03-18)
+
+### Bug Fixes
+- Fix. ([f8bd56c](https://github.com/alexseitsinger/patched-rulesets/commit/f8bd56cc136dedc9f5dd65944e17d1f4f9d937d3))
+
+
+<a name="v0.8.2"></a>
+## [v0.8.2](https://github.com/alexseitsinger/patched-rulesets/compare/v0.7.0...v0.8.2) (2020-03-18)
+
+### Bug Fixes
+- Fixes version check for react. ([d9d2f2a](https://github.com/alexseitsinger/patched-rulesets/commit/d9d2f2a97496c8bd589d0a914439db97b4da7b4f))
+
+### Code Refactoring
+- Updates default import options. ([cf49dd2](https://github.com/alexseitsinger/patched-rulesets/commit/cf49dd2f5151f0491aacddd30cc60c92b85c731e))
+- Updates import options when using ts. ([837dcd8](https://github.com/alexseitsinger/patched-rulesets/commit/837dcd8304dcba1789ba6ec9bcbd33dc45c3cb8a))
+
+### Features
+- Adds normalizing for import settings. ([01026f8](https://github.com/alexseitsinger/patched-rulesets/commit/01026f8f2cbc3a4b2dd88e8c1a3ec13fc50f8c50))
+
+
 <a name="v0.7.0"></a>
 ## [v0.7.0](https://github.com/alexseitsinger/patched-rulesets/compare/v0.6.1...v0.7.0) (2020-03-17)
 
