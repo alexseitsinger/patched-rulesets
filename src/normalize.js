@@ -20,7 +20,7 @@ const getReactVersion = async () => {
     "devDependencies",
   ]
   let version = "detect"
-  if ("packageJson" in output) {
+  if (output !== undefined && "packageJson" in output) {
     keys.forEach(key => {
       if (version !== "detect") {
         return
@@ -48,7 +48,7 @@ const getReactVersionSync = () => {
     "devDependencies",
   ]
   let version = "detect"
-  if ("packageJson" in output) {
+  if (output !== undefined && "packageJson" in output) {
     keys.forEach(key => {
       if (version !== "detect") {
         return
