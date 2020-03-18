@@ -4,10 +4,6 @@ module.exports = {
   },
   settings: {
     "import/internal-regex": "^packages/",
-    "import/ignore": [
-      "*.css",
-      "*.json",
-    ],
     "import/core-modules": [
       "electron",
     ],
