@@ -3,12 +3,22 @@ module.exports = {
     es6: true,
   },
   settings: {
-    "import/core-modules": ["fs", "path", "child_process"],
-    "import/ignore": ["node_modules", ".yalc"],
-    "import/external-module-folders": ["node_modules", ".yalc"],
+    "import/internal-regex": "^packages/",
+    "import/ignore": [
+      "*.css",
+      "*.json",
+    ],
+    "import/core-modules": [
+      "electron",
+    ],
+    "import/external-module-folders": [
+      "node_modules",
+      ".yalc",
+      "dist",
+    ],
     "import/resolver": {
       node: {
-        extensions: [".js", ".jsx", ".ts", ".tsx", ".json"]
+        extensions: [ ".js", ".jsx", ".ts", ".tsx", ".json" ]
       },
       jest: {
         jestConfigFile: "./jest.config.js"
