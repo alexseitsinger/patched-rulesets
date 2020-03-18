@@ -27,7 +27,8 @@
   "dependencies": {
     "confusing-browser-globals": "^1.0.9",
     "deepmerge": "^4.2.2",
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.15",
+    "read-pkg-up": "^7.0.1"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.24.0",
