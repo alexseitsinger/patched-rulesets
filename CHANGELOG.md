@@ -1,3 +1,11 @@
+<a name="v0.8.4"></a>
+## [v0.8.4](https://github.com/alexseitsinger/patched-rulesets/compare/v0.8.3...v0.8.4) (2020-03-18)
+
+### Bug Fixes
+- Adds missing react settings. ([c0c67c4](https://github.com/alexseitsinger/patched-rulesets/commit/c0c67c46d6f12dabac1db0df2e6a74555c29e204))
+- Fixes group name & es6 inclusion. ([efc7bbb](https://github.com/alexseitsinger/patched-rulesets/commit/efc7bbb4fb820f053a29974cbed67e537e4e1fe6))
+
+
 <a name="v0.8.3"></a>
 ## [v0.8.3](https://github.com/alexseitsinger/patched-rulesets/compare/v0.8.2...v0.8.3) (2020-03-18)
 
