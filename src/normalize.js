@@ -73,6 +73,7 @@ const normalizeImportSettings = config => {
     config.settings = {
       ...config.settings,
       react: {
+        ...config.settings.react,
         version: getReactVersionSync(),
       },
     }
