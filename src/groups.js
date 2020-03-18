@@ -21,12 +21,12 @@ const groups = {
   typescript: [ "@typescript-eslint/eslint-plugin", "tsdoc" ],
   safety: ["security"],
   json: ["json"],
-  package: ["package-json"],
+  packageJSON: ["package-json"],
   prose: [ "spellcheck", "markdown" ],
 }
 
 const groupNames = Object.keys(groups)
-const groupsWithoutCore = [ "json", "package" ]
+const groupsWithoutCore = [ "json", "packageJSON" ]
 
 function getPlugins({ names = [], isES6 = false }) {
   const filteredNames = names.filter(n => n.toLowerCase() !== "core")
@@ -36,7 +36,7 @@ function getPlugins({ names = [], isES6 = false }) {
 
   let plugins = [
     ...(isWithCore ? groups.core : []),
-    ...(isES6 ? groups.coreES6 : []),
+    ...(isWithCore && isES6 ? groups.coreES6 : []),
   ]
 
   filteredNames.forEach(groupName => {
