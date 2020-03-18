@@ -1,3 +1,10 @@
+<a name="v0.8.5"></a>
+## [v0.8.5](https://github.com/alexseitsinger/patched-rulesets/compare/v0.8.4...v0.8.5) (2020-03-18)
+
+### Bug Fixes
+- Removes bad setting. ([f81cf88](https://github.com/alexseitsinger/patched-rulesets/commit/f81cf8835fa79ce0f63cb37f4429996001763e94))
+
+
 <a name="v0.8.4"></a>
 ## [v0.8.4](https://github.com/alexseitsinger/patched-rulesets/compare/v0.8.3...v0.8.4) (2020-03-18)
 
