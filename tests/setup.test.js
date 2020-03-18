@@ -9,6 +9,22 @@ const patchedConfig = {
 }
 
 describe("setup", () => {
+  it("should only use a single plugin for packageJSON group", () => {
+    const config = createConfig({
+      pluginNames: getPlugins({
+        names: ["packageJSON"],
+        isES6: false,
+      }),
+      useEslint: false,
+      patchedConfig,
+    })
+
+    const { rules, plugins } = config
+
+    expect(plugins).toStrictEqual(["package-json"])
+  })
+
+
   it("should use the provided patched config and adjust rules appropriately", () => {
     const config = createConfig({
       pluginNames: getPlugins({
