@@ -903,7 +903,7 @@ module.exports = {
    *
    * - "off" according to eslint-config-prettier/@typescript-eslint
    */
-  "@typescript-eslint/space-before-function-paren": "error",
+  "@typescript-eslint/space-before-function-paren": "off",
 
   /**
    * Restricts the types allowed in boolean expressions
