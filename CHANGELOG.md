@@ -1,3 +1,10 @@
+<a name="v0.10.0"></a>
+## [v0.10.0](https://github.com/alexseitsinger/patched-rulesets/compare/v0.9.0...v0.10.0) (2020-03-19)
+
+### Code Refactoring
+- Disable function paren rule. ([a601543](https://github.com/alexseitsinger/patched-rulesets/commit/a6015434b2c0ef445ad3ac1f396cd5d88de16cee))
+
+
 <a name="v0.9.0"></a>
 ## [v0.9.0](https://github.com/alexseitsinger/patched-rulesets/compare/v0.8.5...v0.9.0) (2020-03-19)
 
