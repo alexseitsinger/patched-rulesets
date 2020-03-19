@@ -1,3 +1,10 @@
+<a name="v0.9.0"></a>
+## [v0.9.0](https://github.com/alexseitsinger/patched-rulesets/compare/v0.8.5...v0.9.0) (2020-03-19)
+
+### Code Refactoring
+- Disables extra parens. ([f9047c9](https://github.com/alexseitsinger/patched-rulesets/commit/f9047c9f3c1e1bbfce78054a7ef2c7483faeabb3))
+
+
 <a name="v0.8.5"></a>
 ## [v0.8.5](https://github.com/alexseitsinger/patched-rulesets/compare/v0.8.4...v0.8.5) (2020-03-18)
 
