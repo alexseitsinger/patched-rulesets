@@ -342,7 +342,7 @@ module.exports = {
    *
    * https://eslint.org/docs/rules/jsx-quotes.
    */
-  "jsx-quotes": jsxQuotesRule("prefer-double"),
+  "jsx-quotes": jsxQuotesRule("double"),
 
   /**
    * Enforce consistent spacing between keys and values in object literal
