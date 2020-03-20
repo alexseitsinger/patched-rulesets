@@ -77,21 +77,21 @@ function normalize(
   }
   if (patchedConfig.nodeVersion) {
     const { nodeVersion } = patchedConfig
-    normalizeRule(
-      rules,
-      "node/no-unsupported-features/node-builtins",
-      nodeBuiltinsRule(nodeVersion)
-    )
-    normalizeRule(
-      rules,
-      "node/no-unsupported-features/es-builtins",
-      esBuiltinsRule(nodeVersion)
-    )
-    normalizeRule(
-      rules,
-      "node/no-unsupported-features/es-syntax",
-      esSyntaxRule(nodeVersion)
-    )
+    // normalizeRule(
+    //   rules,
+    //   "node/no-unsupported-features/node-builtins",
+    //   nodeBuiltinsRule(nodeVersion)
+    // )
+    // normalizeRule(
+    //   rules,
+    //   "node/no-unsupported-features/es-builtins",
+    //   esBuiltinsRule(nodeVersion)
+    // )
+    // normalizeRule(
+    //   rules,
+    //   "node/no-unsupported-features/es-syntax",
+    //   esSyntaxRule(nodeVersion)
+    // )
   }
 
   normalizeReactSettings(config)

@@ -89,9 +89,9 @@ module.exports = {
    * NOTE:
    * - Enable after we add compiled sources to ignores.
    */
-  "node/no-unsupported-features/es-builtins": esBuiltinsRule("12.0.0"),
-  "node/no-unsupported-features/es-syntax": esSyntaxRule("12.0.0"),
-  "node/no-unsupported-features/node-builtins": nodeBuiltinsRule("12.0.0"),
+  "node/no-unsupported-features/es-builtins": "off",
+  "node/no-unsupported-features/es-syntax": "off",
+  "node/no-unsupported-features/node-builtins": "off",
 
   /**
    * make process.exit() expressions the same code path as throw
