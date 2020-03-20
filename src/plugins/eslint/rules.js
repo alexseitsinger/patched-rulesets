@@ -1,12 +1,22 @@
 const confusingBrowserGlobals = require("confusing-browser-globals")
 
 /**
- * We specify some specific ignore patterns to exclude from our max-len rule.
- * This should prevent our imports and require paths from wrapping to a second line.
- */
-const requireStatement = `^(var|let|const)\\s.+\\s*=\\s*require\\(['"].+['"]\\);?$`
-const importStatement = `^import\\s.+\\sfrom\\s['"].+['"];?$`
-const maxLengthIgnorePattern = `(${requireStatement})|(${importStatement})`
+ * Prevent capitalizing certain comments if they contain a pattern.
+*/
+const hyperlinkPattern = "^\\s*(https?|ftp)://(www\\.)?"
+const categoryPattern = "^\\s*\(\w+\)"
+const capitalizedCommentsIgnorePattern = `(${categoryPattern})|(${hyperlinkPattern})`
+
+const {
+  braceStyle,
+  idLength,
+  indent,
+  maxLen,
+  jsxQuotes,
+  quotes,
+  semi,
+  linebreakStyle,
+} = require("./normalize")
 
 module.exports = {
   /**
@@ -65,13 +75,7 @@ module.exports = {
    *
    * https://eslint.org/docs/rules/brace-style.
    */
-  "brace-style": [
-    "error",
-    "stroustrup",
-    {
-      allowSingleLine: false,
-    },
-  ],
+  "brace-style": braceStyle("stroustrup"),
 
   /**
    * Enforce camelcase naming convention.
@@ -103,10 +107,10 @@ module.exports = {
    * https://eslint.org/docs/rules/capitalized-comments.
    */
   "capitalized-comments": [
-    "off",
+    "error",
     "always",
     {
-      ignorePattern: "",
+      ignorePattern: capitalizedCommentsIgnorePattern,
       ignoreInlineComments: false,
       ignoreConsecutiveComments: false,
     },
@@ -289,21 +293,7 @@ module.exports = {
    *
    * https://eslint.org/docs/rules/id-length.
    */
-  "id-length": [
-    "error",
-    {
-      /**
-       * We sometimes use single letter variables, so make sure the minimum is 1.
-       */
-      min: 1,
-      /**
-       * This should be the same value as max-len.
-       */
-      max: 88,
-      properties: "always",
-      exceptions: [],
-    },
-  ],
+  "id-length": idLength(88),
 
   /**
    * Require identifiers to match a specified regular expression.
@@ -342,37 +332,7 @@ module.exports = {
    *
    * https://eslint.org/docs/rules/indent.
    */
-  indent: [
-    "error",
-    2,
-    {
-      SwitchCase: 1,
-      VariableDeclarator: {
-        var: 2,
-        let: 2,
-        const: 3,
-      },
-      outerIIFEBody: 1,
-      MemberExpression: 1,
-      FunctionDeclaration: {
-        parameters: "first",
-        body: 1,
-      },
-      FunctionExpression: {
-        parameters: "first",
-        body: 1,
-      },
-      CallExpression: {
-        arguments: "first",
-      },
-      ArrayExpression: 1,
-      ObjectExpression: 1,
-      ImportDeclaration: 1,
-      flatTernaryExpressions: true,
-      ignoredNodes: [],
-      ignoreComments: false,
-    },
-  ],
+  indent: indent(2),
 
   /**
    * Enforce the consistent use of either double or single quotes in JSX
@@ -382,7 +342,7 @@ module.exports = {
    *
    * https://eslint.org/docs/rules/jsx-quotes.
    */
-  "jsx-quotes": [ "error", "prefer-double" ],
+  "jsx-quotes": jsxQuotes("prefer-double"),
 
   /**
    * Enforce consistent spacing between keys and values in object literal
@@ -428,7 +388,7 @@ module.exports = {
    *
    * https://eslint.org/docs/rules/linebreak-style.
    */
-  "linebreak-style": [ "error", "unix" ],
+  "linebreak-style": linebreakStyle("unix"),
 
   /**
    * Require empty lines around comments.
@@ -507,24 +467,7 @@ module.exports = {
    *
    * https://eslint.org/docs/rules/max-len.
    */
-  "max-len": [
-    "error",
-    {
-      code: 88,
-      tabWidth: 2,
-      comments: 88,
-      /*
-       * Setting an ignore pattern according to suggestion on github.
-       * https://github.com/prettier/prettier/issues/1954
-       */
-      ignorePattern: maxLengthIgnorePattern,
-      ignoreTrailingComments: true,
-      ignoreUrls: true,
-      ignoreStrings: true,
-      ignoreTemplateLiterals: true,
-      ignoreRegExpLiterals: true,
-    },
-  ],
+  "max-len": maxLen(88, 2),
 
   /**
    * Enforce a maximum number of lines per file.
@@ -1140,14 +1083,7 @@ module.exports = {
    *
    * https://eslint.org/docs/rules/quotes.
    */
-  quotes: [
-    "error",
-    "double",
-    {
-      avoidEscape: true,
-      allowTemplateLiterals: true,
-    },
-  ],
+  quotes: quotes("double"),
 
   /**
    * Require or disallow semicolons instead of ASI.
@@ -1158,13 +1094,7 @@ module.exports = {
    *
    * https://eslint.org/docs/rules/semi.
    */
-  semi: [
-    "error",
-    "never",
-    {
-      beforeStatementContinuationChars: "any",
-    },
-  ],
+  semi: semi("never"),
 
   /**
    * Enforce spacing around a semicolon.

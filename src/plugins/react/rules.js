@@ -1,3 +1,5 @@
+const { jsxIndentRule, jsxIndentPropsRule } = require("./normalize")
+
 module.exports = {
   /**
    * Enforces consistent naming for boolean props.
@@ -696,14 +698,7 @@ module.exports = {
    *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent.md
    */
-  "react/jsx-indent": [
-    "error",
-    2,
-    {
-      checkAttributes: true,
-      indentLogicalExpressions: true,
-    },
-  ],
+  "react/jsx-indent": jsxIndentRule(2),
 
   /**
    * Validate props indentation in JSX.
@@ -715,7 +710,7 @@ module.exports = {
    *
    * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent-props.md
    */
-  "react/jsx-indent-props": ["error", "first"],
+  "react/jsx-indent-props": jsxIndentPropsRule(2),
 
   /**
    * Validate JSX has key prop when in array or iterator.

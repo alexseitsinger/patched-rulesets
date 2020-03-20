@@ -2,6 +2,12 @@
  * https://github.com/mysticatea/eslint-plugin-node
  */
 
+const {
+  esBuiltinsRule,
+  esSyntaxRule,
+  nodeBuiltinsRule,
+} = require("./normalize")
+
 module.exports = {
   /**
    * ensure Node.js-style error-first callback pattern is followed
@@ -83,42 +89,9 @@ module.exports = {
    * NOTE:
    * - Enable after we add compiled sources to ignores.
    */
-  "node/no-unsupported-features/es-builtins": [
-    "off",
-    {
-      /*
-       *  This option is read from the package.json, but can be overwritten here.
-       * version: ">=8.0.0",
-       *  List of items to omit from this rule. This rule only accepts an array
-       *  of specific strings. See URL for that list.
-       */
-      ignores: [],
-    },
-  ],
-  "node/no-unsupported-features/es-syntax": [
-    "off",
-    {
-      /*
-       *  This option is read from the package.json, but can be overwritten here.
-       * version: ">=8.0.0",
-       *  List of items to omit from this rule. This rule only accepts an array
-       *  of specific strings. See URL for that list.
-       */
-      ignores: [],
-    },
-  ],
-  "node/no-unsupported-features/node-builtins": [
-    "off",
-    {
-      // This option is read from the package.json, but can be overwritten here.
-      version: ">=8.0.0",
-      /*
-       * List of items to omit from this rule. This rule only accepts an array
-       * of specific strings. See URL for that list.
-       */
-      ignores: [],
-    },
-  ],
+  "node/no-unsupported-features/es-builtins": esBuiltinsRule("12.0.0"),
+  "node/no-unsupported-features/es-syntax": esSyntaxRule("12.0.0"),
+  "node/no-unsupported-features/node-builtins": nodeBuiltinsRule("12.0.0"),
 
   /**
    * make process.exit() expressions the same code path as throw

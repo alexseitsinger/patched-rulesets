@@ -2,6 +2,13 @@
  * https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin
  */
 
+const {
+  braceStyleRule,
+  indentRule,
+  semiRule,
+  quotesRule,
+} = require("../eslint/normalize")
+
 module.exports = {
   /**
    * Rules according to plugin:all
@@ -198,13 +205,7 @@ module.exports = {
    * - Requires disabling the original eslint config rule.
    * - "off" according to plugin:recommended
    */
-  "@typescript-eslint/brace-style": [
-    "error",
-    "stroustrup",
-    {
-      allowSingleLine: false,
-    },
-  ],
+  "@typescript-eslint/brace-style": braceStyleRule("stroustrup"),
 
   /**
    * Enforce camelCase naming convention
@@ -315,37 +316,7 @@ module.exports = {
    * - Enabling this rule fixes indentation with stroustrup brace-style when formatting
    * with prettier.
    */
-  "@typescript-eslint/indent": [
-    "error",
-    2,
-    {
-      SwitchCase: 1,
-      VariableDeclarator: {
-        var: 2,
-        let: 2,
-        const: 3,
-      },
-      outerIIFEBody: 1,
-      MemberExpression: 1,
-      FunctionDeclaration: {
-        parameters: "first",
-        body: 1,
-      },
-      FunctionExpression: {
-        parameters: "first",
-        body: 1,
-      },
-      CallExpression: {
-        arguments: "first",
-      },
-      ArrayExpression: 1,
-      ObjectExpression: 1,
-      ImportDeclaration: 1,
-      flatTernaryExpressions: true,
-      ignoredNodes: [],
-      ignoreComments: false,
-    },
-  ],
+  "@typescript-eslint/indent": indentRule(2),
 
   /**
    * Require that interface names should or should not prefixed with I
@@ -842,14 +813,7 @@ module.exports = {
    *
    * - "off" according to eslint-config-prettier/@typescript-eslint
    */
-  "@typescript-eslint/quotes": [
-    "error",
-    "double",
-    {
-      avoidEscape: true,
-      allowTemplateLiterals: true,
-    },
-  ],
+  "@typescript-eslint/quotes": quotesRule("double"),
 
   /**
    * Enforce giving compare argument to Array#sort
@@ -895,7 +859,7 @@ module.exports = {
    * (Normalized)
    * (Replacement:eslint)
    */
-  "@typescript-eslint/semi": "error",
+  "@typescript-eslint/semi": semiRule("never"),
 
   /**
    * enforce consistent spacing before function definition opening parenthesis
