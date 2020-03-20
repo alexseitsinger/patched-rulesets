@@ -1296,8 +1296,15 @@ module.exports = {
     "warn",
     "always",
     {
-      exceptions: [],
-      markers: [],
+      line: {
+        exceptions: [],
+        markers: [],
+      },
+      block: {
+        markers: ["*"],
+        exceptions: [],
+        balanced: true,
+      }
     },
   ],
 
