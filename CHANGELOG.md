@@ -5,6 +5,8 @@ _Rulesets used with the Patched linter & formatter_
 
 
 ## Bug Fixes
+  - Fixes typo.
+  ([604bb1ff](https://github.com/alexseitsinger/patched-rulesets/commit/604bb1ff3aeaacc533ddaec5214b2e460a1d465c))
   - Fixes mis-named methods.
   ([688e7bd7](https://github.com/alexseitsinger/patched-rulesets/commit/688e7bd73c90fd85ba7c3f3926b0f525639425f2))
   - Fixes names for unassigned imports allowed.
@@ -83,6 +85,8 @@ _Rulesets used with the Patched linter & formatter_
 
 
 ## Chore
+  - Updates the changelog for v0.11.0.
+  ([06b52290](https://github.com/alexseitsinger/patched-rulesets/commit/06b52290c5fef6019bda59bfe5169e51b22d9949))
   - Updates deps.
   ([073da3de](https://github.com/alexseitsinger/patched-rulesets/commit/073da3de24388bbae84c97e52f7f4e2149a92493))
   - Adds changelogrc and template.
@@ -123,6 +127,8 @@ _Rulesets used with the Patched linter & formatter_
   ([aa139477](https://github.com/alexseitsinger/patched-rulesets/commit/aa1394777dd05bd1584adedd6a28a91376011e30))
 
   - **release**
+    - v0.11.1 codename(friendly-addition)
+  ([45df35cc](https://github.com/alexseitsinger/patched-rulesets/commit/45df35ccf79198a4e879a415965af5b6b7d7c78b))
     - v0.11.0 codename(enchanted-street)
   ([b917b82e](https://github.com/alexseitsinger/patched-rulesets/commit/b917b82ef77588ae449de3971e322d9701b69dd5))
 
