@@ -17,12 +17,13 @@ module.exports = {
    *
    * NOTES:
    * - This may affect JSX properties, so we may want to use "never" instead.
+   * - Set this to "never" to match the default behavior of prettier.
    *
    * https://eslint.org/docs/rules/array-bracket-spacing.
    */
   "array-bracket-spacing": [
     "error",
-    "always",
+    "never",
     {
       singleValue: false,
       objectsInArrays: false,
