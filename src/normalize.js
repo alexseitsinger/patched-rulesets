@@ -12,6 +12,7 @@ const {
   braceStyleRule,
   quotesRule,
   jsxQuotesRule,
+  linebreakStyleRule,
 } = require("./plugins/eslint/normalize")
 const {
   nodeBuiltinsRule,
@@ -37,10 +38,10 @@ function normalizeRule(rules, ruleName, value) {
 
 function normalizeRules(
   config,
-  { braceStyle, maxLength, nodeVersion, quotes, semi, spaces }
+  { braceStyle, maxLength, nodeVersion, quotes, semi, spaces, linebreakStyle }
 ) {
   const { rules } = config
-
+  normalizeRule(rules, "linebreak-style", linebreakStyleRule(linebreakStyle))
   normalizeRule(rules, "max-len", maxLenRule(maxLength, spaces))
   normalizeRule(rules, "id-length", idLengthRule(maxLength))
   normalizeRule(rules, "semi", semiRule(semi))
