@@ -6,11 +6,11 @@ const requireStatement = `^(var|let|const)\\s.+\\s*=\\s*require\\(['"].+['"]\\);
 const importStatement = `^import\\s.+\\sfrom\\s['"].+['"];?$`
 const maxLengthIgnorePattern = `(${requireStatement})|(${importStatement})`
 
-const linebreakStyle = style => {
+const linebreakStyleRule = style => {
   return ["error", style]
 }
 
-const braceStyle = (style) => {
+const braceStyleRule = (style) => {
   return [
     "error",
     style,
@@ -20,7 +20,7 @@ const braceStyle = (style) => {
   ]
 }
 
-const idLength = (maxLength) => {
+const idLengthRule = (maxLength) => {
   return [
     "error",
     {
@@ -38,7 +38,7 @@ const idLength = (maxLength) => {
   ]
 }
 
-const indent = (spaces) => {
+const indentRule = (spaces) => {
   return [
     "error",
     spaces,
@@ -72,7 +72,7 @@ const indent = (spaces) => {
   ]
 }
 
-const maxLen = (maxLength, spaces) => {
+const maxLenRule = (maxLength, spaces) => {
   return  [
     "error",
     {
@@ -93,17 +93,17 @@ const maxLen = (maxLength, spaces) => {
   ]
 }
 
-const jsxQuotes = (preferredStyle) => {
+const jsxQuotesRule = (quoteStyle) => {
   return [
     "error",
-    preferredStyle,
+    `prefer-${quoteStyle}`,
   ]
 }
 
-const quotes = (quotes) => {
+const quotesRule = (quoteStyle) => {
   return [
     "error",
-    quotes,
+    quoteStyle,
     {
       avoidEscape: true,
       allowTemplateLiterals: true,
@@ -111,7 +111,7 @@ const quotes = (quotes) => {
   ]
 }
 
-const semi = (when) => {
+const semiRule = (when) => {
   return [
     "error",
     when,
@@ -122,12 +122,12 @@ const semi = (when) => {
 }
 
 module.exports = {
-  braceStyle,
-  idLength,
-  indent,
-  maxLen,
-  jsxQuotes,
-  quotes,
-  semi,
-  linebreakStyle,
+  braceStyleRule,
+  idLengthRule,
+  indentRule,
+  maxLenRule,
+  jsxQuotesRule,
+  quotesRule,
+  semiRule,
+  linebreakStyleRule,
 }
