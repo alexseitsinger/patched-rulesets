@@ -169,7 +169,7 @@ function createConfig({ pluginNames, useEslint = true, patchedConfig = {} }) {
   const isTypeScript = usesTypescript(plugins)
   let config = {
     parserOptions: {
-      ecmaVersion: 2020,
+      ecmaVersion: patchedConfig.ecmaVersion ? patchedConfig.ecmaVersion : 2020,
       sourceType: "module",
     },
     env: {},

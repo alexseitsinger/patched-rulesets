@@ -5,10 +5,11 @@ const patchedConfig = {
   braceStyle: "stroustrup",
   semi: "never",
   quoteStyle: "double",
-  nodeVersion: process.version,
+  nodeVersion: process && process.version || "12.0.0",
   spaces: 2,
   maxLength: 88,
   linebreakStyle: "unix",
+  ecmaVersion: 2020,
 }
 
 const nodeOnly = createConfig({
