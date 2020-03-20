@@ -13,7 +13,7 @@ const esSyntaxRule = (nodeVersion) => {
     "error",
     {
       version: `>=${nodeVersion}`,
-      ignores: ["module"],
+      ignores: [],
     }
   ]
 }

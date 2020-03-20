@@ -13,7 +13,7 @@ const {
   indentRule,
   maxLenRule,
   jsxQuotesRule,
-  quotesRules,
+  quotesRule,
   semiRule,
   linebreakStyleRule,
 } = require("./normalize")
@@ -326,23 +326,23 @@ module.exports = {
   "implicit-arrow-linebreak": "off",
 
   /**
-   * Enforce consistent indentRuleation.
+   * Enforce consistent indentation.
    * (Fixable)
    * (Normalized)
    *
-   * https://eslint.org/docs/rules/indentRule.
+   * https://eslint.org/docs/rules/indent.
    */
-  indentRule: indentRule(2),
+  indent: indentRule(2),
 
   /**
-   * Enforce the consistent use of either double or single quotesRules in JSX
+   * Enforce the consistent use of either double or single quotes in JSX
    * attributes.
    *
    * (fixable).
    *
-   * https://eslint.org/docs/rules/jsx-quotesRules.
+   * https://eslint.org/docs/rules/jsx-quotes.
    */
-  "jsx-quotesRules": jsxQuotesRule("prefer-double"),
+  "jsx-quotes": jsxQuotesRule("prefer-double"),
 
   /**
    * Enforce consistent spacing between keys and values in object literal
@@ -723,7 +723,7 @@ module.exports = {
   ],
 
   /**
-   * Disallow mixed spaces and tabs for indentRuleation.
+   * Disallow mixed spaces and tabs for indentation.
    *
    * https://eslint.org/docs/rules/no-mixed-spaces-and-tabs.
    */
@@ -1061,11 +1061,11 @@ module.exports = {
   "prefer-object-spread": "error",
 
   /**
-   * Require quotesRules around object literal property names.
+   * Require quotes around object literal property names.
    *
-   * https://eslint.org/docs/rules/quotesRule-props.
+   * https://eslint.org/docs/rules/quote-props.
    */
-  "quotesRule-props": [
+  "quote-props": [
     "error",
     "as-needed",
     {
@@ -1077,33 +1077,33 @@ module.exports = {
 
   /**
    * Enforces the consistent use of either backticks, double, or single
-   * quotesRules.
+   * quotes.
    *
    * (fixable).
    *
-   * https://eslint.org/docs/rules/quotesRules.
+   * https://eslint.org/docs/rules/quotes.
    */
-  quotesRules: quotesRules("double"),
+  quotes: quotesRule("double"),
 
   /**
-   * Require or disallow semiRulecolons instead of ASI.
+   * Require or disallow semicolons instead of ASI.
    *
    * (fixable).
    *
    * Set to any to match prettier.
    *
-   * https://eslint.org/docs/rules/semiRule.
+   * https://eslint.org/docs/rules/semi.
    */
-  semiRule: semiRule("never"),
+  semi: semiRule("never"),
 
   /**
-   * Enforce spacing around a semiRulecolon.
+   * Enforce spacing around a semicolon.
    *
    * (fixable).
    *
-   * https://eslint.org/docs/rules/semiRule-spacing.
+   * https://eslint.org/docs/rules/semi-spacing.
    */
-  "semiRule-spacing": [
+  "semi-spacing": [
     "error",
     {
       before: false,
@@ -1112,15 +1112,15 @@ module.exports = {
   ],
 
   /**
-   * Enforce location of semiRulecolons.
+   * Enforce location of semicolons.
    *
    * (fixable).
    *
    * Set to "first" to match prettier.
    *
-   * https://eslint.org/docs/rules/semiRule-style.
+   * https://eslint.org/docs/rules/semi-style.
    */
-  "semiRule-style": [ "error", "last" ],
+  "semi-style": [ "error", "last" ],
 
   /**
    * Require object keys to be sorted.
@@ -1580,13 +1580,13 @@ module.exports = {
   ],
 
   /**
-   * Disallow unnecessary semiRulecolons.
+   * Disallow unnecessary semicolons.
    *
    * (fixable).
    *
-   * https://eslint.org/docs/rules/no-extra-semiRule.
+   * https://eslint.org/docs/rules/no-extra-semi.
    */
-  "no-extra-semiRule": "error",
+  "no-extra-semi": "error",
 
   /**
    * Disallow reassigning function declarations.

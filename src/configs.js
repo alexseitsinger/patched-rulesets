@@ -1,12 +1,23 @@
 const { createConfig } = require("./setup")
 const { getPlugins } = require("./groups")
 
+const patchedConfig = {
+  braceStyle: "stroustrup",
+  semi: "never",
+  quoteStyle: "double",
+  nodeVersion: process.version,
+  spaces: 2,
+  maxLength: 88,
+  linebreakStyle: "unix",
+}
+
 const nodeOnly = createConfig({
   pluginNames: getPlugins({
     names: [],
     isES6: false,
   }),
   useEslint: true,
+  patchedConfig,
 })
 
 const js = createConfig({
@@ -15,6 +26,7 @@ const js = createConfig({
     isES6: true,
   }),
   useEslint: true,
+  patchedConfig,
 })
 
 const jsReact = createConfig({
@@ -23,6 +35,7 @@ const jsReact = createConfig({
     isES6: true,
   }),
   useEslint: true,
+  patchedConfig,
 })
 
 const jsReactRedux = createConfig({
@@ -31,6 +44,7 @@ const jsReactRedux = createConfig({
     isES6: true,
   }),
   useEslint: true,
+  patchedConfig,
 })
 
 const ts = createConfig({
@@ -39,6 +53,7 @@ const ts = createConfig({
     isES6: true,
   }),
   useEslint: true,
+  patchedConfig,
 })
 
 const tsReact = createConfig({
@@ -47,6 +62,7 @@ const tsReact = createConfig({
     isES6: true,
   }),
   useEslint: true,
+  patchedConfig,
 })
 
 const tsReactRedux = createConfig({
@@ -55,6 +71,7 @@ const tsReactRedux = createConfig({
     isES6: true,
   }),
   useEslint: true,
+  patchedConfig,
 })
 
 const mdJs = createConfig({
@@ -63,6 +80,7 @@ const mdJs = createConfig({
     isES6: true,
   }),
   useEslint: true,
+  patchedConfig,
 })
 
 const mdJsReact = createConfig({
@@ -71,6 +89,7 @@ const mdJsReact = createConfig({
     isES6: true,
   }),
   useEslint: true,
+  patchedConfig,
 })
 
 const mdJsReactRedux = createConfig({
@@ -79,6 +98,7 @@ const mdJsReactRedux = createConfig({
     isES6: true,
   }),
   useEslint: true,
+  patchedConfig,
 })
 
 const mdTs = createConfig({
@@ -87,6 +107,7 @@ const mdTs = createConfig({
     isES6: true,
   }),
   useEslint: true,
+  patchedConfig,
 })
 
 const mdTsReact = createConfig({
@@ -95,6 +116,7 @@ const mdTsReact = createConfig({
     isES6: true,
   }),
   useEslint: true,
+  patchedConfig,
 })
 
 const mdTsReactRedux = createConfig({
@@ -103,16 +125,19 @@ const mdTsReactRedux = createConfig({
     isES6: true,
   }),
   useEslint: true,
+  patchedConfig,
 })
 
 const json = createConfig({
   pluginNames: ["json"],
   useEslint: false,
+  patchedConfig,
 })
 
 const packageJson = createConfig({
   pluginNames: ["package-json"],
   useEslint: false,
+  patchedConfig,
 })
 
 module.exports = {

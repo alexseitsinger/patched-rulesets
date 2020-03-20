@@ -28,7 +28,7 @@ const getReactVersion = () => {
   return version
 }
 
-const loadReactSettings = config => {
+const normalizeReactSettings = config => {
   if (config.plugins.includes("react")) {
     config.settings = {
       ...config.settings,
@@ -56,7 +56,7 @@ const jsxIndentRule = (spaces) => {
 }
 
 module.exports = {
-  loadReactSettings,
+  normalizeReactSettings,
   jsxIndentRule,
   jsxIndentPropsRule,
 }

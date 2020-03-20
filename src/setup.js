@@ -2,7 +2,7 @@ const deepMerge = require("deepmerge")
 const uniq = require("lodash/uniq")
 
 const { groups } = require("./groups")
-const { normalizeRules } = require("./normalize")
+const { normalize } = require("./normalize")
 
 const {
   core,
@@ -254,10 +254,8 @@ function createConfig({ pluginNames, useEslint = true, patchedConfig = {} }) {
 
   /**
    * Normalize the rules.
-   *
-   * In the future, perhaps detect this at runtime?
    */
-  normalizeRules(config, patchedConfig)
+  normalize(config, patchedConfig)
 
   /**
    * Return the final config
