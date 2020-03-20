@@ -1,179 +1,132 @@
-<a name="v0.10.0"></a>
-## [v0.10.0](https://github.com/alexseitsinger/patched-rulesets/compare/v0.9.0...v0.10.0) (2020-03-19)
+# patched-rulesets
 
-### Code Refactoring
-- Disable function paren rule. ([a601543](https://github.com/alexseitsinger/patched-rulesets/commit/a6015434b2c0ef445ad3ac1f396cd5d88de16cee))
+_Rulesets used with the Patched linter & formatter_
 
 
-<a name="v0.9.0"></a>
-## [v0.9.0](https://github.com/alexseitsinger/patched-rulesets/compare/v0.8.5...v0.9.0) (2020-03-19)
 
-### Code Refactoring
-- Disables extra parens. ([f9047c9](https://github.com/alexseitsinger/patched-rulesets/commit/f9047c9f3c1e1bbfce78054a7ef2c7483faeabb3))
-
-
-<a name="v0.8.5"></a>
-## [v0.8.5](https://github.com/alexseitsinger/patched-rulesets/compare/v0.8.4...v0.8.5) (2020-03-18)
-
-### Bug Fixes
-- Removes bad setting. ([f81cf88](https://github.com/alexseitsinger/patched-rulesets/commit/f81cf8835fa79ce0f63cb37f4429996001763e94))
-
-
-<a name="v0.8.4"></a>
-## [v0.8.4](https://github.com/alexseitsinger/patched-rulesets/compare/v0.8.3...v0.8.4) (2020-03-18)
-
-### Bug Fixes
-- Adds missing react settings. ([c0c67c4](https://github.com/alexseitsinger/patched-rulesets/commit/c0c67c46d6f12dabac1db0df2e6a74555c29e204))
-- Fixes group name & es6 inclusion. ([efc7bbb](https://github.com/alexseitsinger/patched-rulesets/commit/efc7bbb4fb820f053a29974cbed67e537e4e1fe6))
+## Bug Fixes
+  - Fixes mis-named methods.
+  ([688e7bd7](https://github.com/alexseitsinger/patched-rulesets/commit/688e7bd73c90fd85ba7c3f3926b0f525639425f2))
+  - Fixes names for unassigned imports allowed.
+  ([d1500bd7](https://github.com/alexseitsinger/patched-rulesets/commit/d1500bd78ffdd0d7c2c2dd5b8ec8be0e8931654e))
+  - Removes bad setting.
+  ([f81cf883](https://github.com/alexseitsinger/patched-rulesets/commit/f81cf8835fa79ce0f63cb37f4429996001763e94))
+  - Adds missing react settings.
+  ([c0c67c46](https://github.com/alexseitsinger/patched-rulesets/commit/c0c67c46d6f12dabac1db0df2e6a74555c29e204))
+  - Fixes group name & es6 inclusion.
+  ([efc7bbb4](https://github.com/alexseitsinger/patched-rulesets/commit/efc7bbb4fb820f053a29974cbed67e537e4e1fe6))
+  - Fix.
+  ([f8bd56cc](https://github.com/alexseitsinger/patched-rulesets/commit/f8bd56cc136dedc9f5dd65944e17d1f4f9d937d3))
+  - Fixes version check for react.
+  ([d9d2f2a9](https://github.com/alexseitsinger/patched-rulesets/commit/d9d2f2a97496c8bd589d0a914439db97b4da7b4f))
+  - Removes console statements.
+  ([905bf9b9](https://github.com/alexseitsinger/patched-rulesets/commit/905bf9b95e81799dce9128b77387475a50c06f59))
 
 
-<a name="v0.8.3"></a>
-## [v0.8.3](https://github.com/alexseitsinger/patched-rulesets/compare/v0.8.2...v0.8.3) (2020-03-18)
-
-### Bug Fixes
-- Fix. ([f8bd56c](https://github.com/alexseitsinger/patched-rulesets/commit/f8bd56cc136dedc9f5dd65944e17d1f4f9d937d3))
 
 
-<a name="v0.8.2"></a>
-## [v0.8.2](https://github.com/alexseitsinger/patched-rulesets/compare/v0.7.0...v0.8.2) (2020-03-18)
-
-### Bug Fixes
-- Fixes version check for react. ([d9d2f2a](https://github.com/alexseitsinger/patched-rulesets/commit/d9d2f2a97496c8bd589d0a914439db97b4da7b4f))
-
-### Code Refactoring
-- Updates default import options. ([cf49dd2](https://github.com/alexseitsinger/patched-rulesets/commit/cf49dd2f5151f0491aacddd30cc60c92b85c731e))
-- Updates import options when using ts. ([837dcd8](https://github.com/alexseitsinger/patched-rulesets/commit/837dcd8304dcba1789ba6ec9bcbd33dc45c3cb8a))
-
-### Features
-- Adds normalizing for import settings. ([01026f8](https://github.com/alexseitsinger/patched-rulesets/commit/01026f8f2cbc3a4b2dd88e8c1a3ec13fc50f8c50))
-
-
-<a name="v0.7.0"></a>
-## [v0.7.0](https://github.com/alexseitsinger/patched-rulesets/compare/v0.6.1...v0.7.0) (2020-03-17)
-
-### Code Refactoring
-- Changes rule check. ([40fb9d0](https://github.com/alexseitsinger/patched-rulesets/commit/40fb9d0a2c67ce20e0dc023956877b071b4aba4b))
+## Features
+  - Adds changeable ecmaVersion.
+  ([82830066](https://github.com/alexseitsinger/patched-rulesets/commit/82830066060858cb8347cff92c111cc0dac677ca))
+  - Adds linebreakStyle to normalizing.
+  ([a5ff39fd](https://github.com/alexseitsinger/patched-rulesets/commit/a5ff39fd94232ec34756bc187418ea2c4778de7f))
+  - Adds patch for react/sort-comp.
+  ([c8530928](https://github.com/alexseitsinger/patched-rulesets/commit/c8530928f96cce22339bb2bc3efe6f69891c2a0e))
+  - Updates normalizing process.
+  ([dd9f40d4](https://github.com/alexseitsinger/patched-rulesets/commit/dd9f40d450af67e08112d58325aa47904452bda8))
+  - Adds normalizing for import settings.
+  ([01026f8f](https://github.com/alexseitsinger/patched-rulesets/commit/01026f8f2cbc3a4b2dd88e8c1a3ec13fc50f8c50))
 
 
-<a name="v0.6.1"></a>
-## [v0.6.1](https://github.com/alexseitsinger/patched-rulesets/compare/v0.6.0...v0.6.1) (2020-03-17)
-
-### Bug Fixes
-- Removes console statements. ([905bf9b](https://github.com/alexseitsinger/patched-rulesets/commit/905bf9b95e81799dce9128b77387475a50c06f59))
 
 
-<a name="v0.6.0"></a>
-## [v0.6.0](https://github.com/alexseitsinger/patched-rulesets/compare/v0.5.0...v0.6.0) (2020-03-17)
-
-### Bug Fixes
-- Fixes feature normalize. ([7b914e1](https://github.com/alexseitsinger/patched-rulesets/commit/7b914e1ceb243b2032b5bc683373139d784bbcbf))
-
-### Code Refactoring
-- Adds os to allowed builtins. ([038c2dd](https://github.com/alexseitsinger/patched-rulesets/commit/038c2ddf4695f39ed0e1b7f14fa06a6ea666e0a5))
-- Makes sep groups for ES6 plugins. ([4586380](https://github.com/alexseitsinger/patched-rulesets/commit/4586380f5c4bb21e9d87d81a236dc3fabae6cbed))
-- Takes patchedrc config. ([4a761ad](https://github.com/alexseitsinger/patched-rulesets/commit/4a761ad5d1a66a91cc5792065670018abe0084bc))
-- Updates api for passing config. ([3bcdc1b](https://github.com/alexseitsinger/patched-rulesets/commit/3bcdc1b3425bf13d88719156324938147a054f8e))
-
-### Features
-- Adds correct env settings. ([9eb149e](https://github.com/alexseitsinger/patched-rulesets/commit/9eb149ee406ed4915a44d2b9911d6471225995cc))
-- Adds missing patch for eslint. ([8c655a2](https://github.com/alexseitsinger/patched-rulesets/commit/8c655a294afde9d908bb9040cd0c0ad5589d53d9))
-- Adds nodeOnly preset. ([148c592](https://github.com/alexseitsinger/patched-rulesets/commit/148c592b08f403525e070f5d660949e4b5382f33))
-
-
-<a name="v0.5.0"></a>
-## [v0.5.0](https://github.com/alexseitsinger/patched-rulesets/compare/v0.4.1...v0.5.0) (2020-03-16)
-
-### Features
-- Adds id-length to normalizing. ([7f3c3a2](https://github.com/alexseitsinger/patched-rulesets/commit/7f3c3a24e76447d5706404bcca1bad961d8aed1a))
-
-
-<a name="v0.4.1"></a>
-## [v0.4.1](https://github.com/alexseitsinger/patched-rulesets/compare/v0.4.0...v0.4.1) (2020-03-16)
-
-### Bug Fixes
-- Removes typo. ([9d0f743](https://github.com/alexseitsinger/patched-rulesets/commit/9d0f743eafa74a490e8287f4ecd072d9e5c69f7d))
+## Refactor
+  - Renames normalizers.
+  ([7e9fb01d](https://github.com/alexseitsinger/patched-rulesets/commit/7e9fb01dbcfcf660e0e13e18de1060171fba1f03))
+  - Adds Rule to each function name.
+  ([39dd2296](https://github.com/alexseitsinger/patched-rulesets/commit/39dd2296162927e271993add66a19b9f82afe4ac))
+  - Updates sort-comp rule.
+  ([f7841be9](https://github.com/alexseitsinger/patched-rulesets/commit/f7841be9de7f2b9ed595365068d51f2a373acf70))
+  - Adds optional semi at end.
+  ([af24e078](https://github.com/alexseitsinger/patched-rulesets/commit/af24e078e7d997816104e837ee1af8a828fe905f))
+  - Updates ignore pattern.
+  ([6eb28b30](https://github.com/alexseitsinger/patched-rulesets/commit/6eb28b30514c2930eca53dd378da146a80f6fe87))
+  - Changes arrow spacing.
+  ([73357db9](https://github.com/alexseitsinger/patched-rulesets/commit/73357db98ad75a458bc3f65caa14f127cac28337))
+  - Adjusts spaced comments rule.
+  ([5bb60c1d](https://github.com/alexseitsinger/patched-rulesets/commit/5bb60c1dd715fc0fdfd74ae91e77074c9a90b296))
+  - Disable function paren rule.
+  ([a6015434](https://github.com/alexseitsinger/patched-rulesets/commit/a6015434b2c0ef445ad3ac1f396cd5d88de16cee))
+  - Disables extra parens.
+  ([f9047c9f](https://github.com/alexseitsinger/patched-rulesets/commit/f9047c9f3c1e1bbfce78054a7ef2c7483faeabb3))
+  - Updates import options when using ts.
+  ([837dcd83](https://github.com/alexseitsinger/patched-rulesets/commit/837dcd8304dcba1789ba6ec9bcbd33dc45c3cb8a))
+  - Updates default import options.
+  ([cf49dd2f](https://github.com/alexseitsinger/patched-rulesets/commit/cf49dd2f5151f0491aacddd30cc60c92b85c731e))
+  - Changes rule check.
+  ([40fb9d0a](https://github.com/alexseitsinger/patched-rulesets/commit/40fb9d0a2c67ce20e0dc023956877b071b4aba4b))
 
 
-<a name="v0.4.0"></a>
-## [v0.4.0](https://github.com/alexseitsinger/patched-rulesets/compare/v0.3.3...v0.4.0) (2020-03-16)
-
-### Code Refactoring
-- Updates some rules. ([eb085d4](https://github.com/alexseitsinger/patched-rulesets/commit/eb085d4034427be6e700cde082ef0109572e2ada))
-
-### Features
-- Adds patch to @typescript. ([dfe6f50](https://github.com/alexseitsinger/patched-rulesets/commit/dfe6f50086cbbca00ba04cbf257cecd1f46742d1))
 
 
-<a name="v0.3.3"></a>
-## [v0.3.3](https://github.com/alexseitsinger/patched-rulesets/compare/v0.3.2...v0.3.3) (2020-03-16)
-
-### Bug Fixes
-- Fixes IIFE indentation. ([211babf](https://github.com/alexseitsinger/patched-rulesets/commit/211babf02b7e658a268dd3d1c69276f37fabb03e))
-
-
-<a name="v0.3.2"></a>
-## [v0.3.2](https://github.com/alexseitsinger/patched-rulesets/compare/v0.3.1...v0.3.2) (2020-03-16)
-
-
-<a name="v0.3.1"></a>
-## [v0.3.1](https://github.com/alexseitsinger/patched-rulesets/compare/v0.3.0...v0.3.1) (2020-03-16)
-
-### Bug Fixes
-- Fixes normalize for jsx-quotes. ([c061dd3](https://github.com/alexseitsinger/patched-rulesets/commit/c061dd31eaa5a22916a0c63486db8ec83a69e82e))
+## Test
+  - Adds ecmaversion to patchedConfig.
+  ([62622bd6](https://github.com/alexseitsinger/patched-rulesets/commit/62622bd602f81816903ef4e9e6fbebda16c02a57))
+  - Updates tests.
+  ([44a766d2](https://github.com/alexseitsinger/patched-rulesets/commit/44a766d2bfe5722602925b392869267ec1f4ed0e))
+  - Adds test for package-json group.
+  ([ba0842c3](https://github.com/alexseitsinger/patched-rulesets/commit/ba0842c396cb97580277532de03d770ec6d8f7d0))
+  - Adds tests for setup.
+  ([f9e2d48d](https://github.com/alexseitsinger/patched-rulesets/commit/f9e2d48d0c315b0d167c009c190302150d082e92))
 
 
-<a name="v0.3.0"></a>
-## [v0.3.0](https://github.com/alexseitsinger/patched-rulesets/compare/v0.2.0...v0.3.0) (2020-03-16)
-
-### Code Refactoring
-- Re-enables some rules (patched later). ([967c70c](https://github.com/alexseitsinger/patched-rulesets/commit/967c70c048d9416dc838fc115da7f9da92ee2a9d))
-- Re-enables some rules (patched later). ([7405af5](https://github.com/alexseitsinger/patched-rulesets/commit/7405af5eb1f1b01f3e8937ab67d22edd06c49f88))
-- Re-enalbes rule. ([b01e7df](https://github.com/alexseitsinger/patched-rulesets/commit/b01e7df545ddbca8fa345b7e6a0b81012a28cae5))
-- Renames plugin folder correctly. ([35d7f06](https://github.com/alexseitsinger/patched-rulesets/commit/35d7f06d2b2851708b6917ff2fc4af6da386a5de))
-
-### Features
-- Adds more rule normalizers. ([4dec672](https://github.com/alexseitsinger/patched-rulesets/commit/4dec6726197396fe1c0e8ce04964f3fef56bad61))
-- Adds new normalizer settings. ([9882841](https://github.com/alexseitsinger/patched-rulesets/commit/988284188ce2d6313b1e23be6ab6b57c07519f8f))
 
 
-<a name="v0.2.0"></a>
-## [v0.2.0](https://github.com/alexseitsinger/patched-rulesets/compare/v0.1.0...v0.2.0) (2020-03-12)
+## Chore
+  - Updates deps.
+  ([073da3de](https://github.com/alexseitsinger/patched-rulesets/commit/073da3de24388bbae84c97e52f7f4e2149a92493))
+  - Adds changelogrc and template.
+  ([f9445e6c](https://github.com/alexseitsinger/patched-rulesets/commit/f9445e6cd8759c2334c16309d329610270b1f7f8))
+  - Updates the changelog for v0.10.0.
+  ([b0c83c61](https://github.com/alexseitsinger/patched-rulesets/commit/b0c83c61389b2e25e4576e4bb51d9ce3fc6be152))
+  - 0.10.0
+  ([2f428c6a](https://github.com/alexseitsinger/patched-rulesets/commit/2f428c6a491d1d72e4765f7b5054cf3fd215cbab))
+  - Updates the changelog for v0.9.0.
+  ([8a8f175d](https://github.com/alexseitsinger/patched-rulesets/commit/8a8f175d5f930069e94c343e886c539111f2573f))
+  - 0.9.0
+  ([f3de895d](https://github.com/alexseitsinger/patched-rulesets/commit/f3de895dcdd971aeb1bafe1efad44fa77abfc2f3))
+  - Updates the changelog for v0.8.5.
+  ([cdaf665e](https://github.com/alexseitsinger/patched-rulesets/commit/cdaf665e86f62126a7581af865f8080f99ffdf1f))
+  - 0.8.5
+  ([578a1fc9](https://github.com/alexseitsinger/patched-rulesets/commit/578a1fc942c50cf31df3260de949e34506d24c7d))
+  - Updates the changelog for v0.8.4.
+  ([093158d0](https://github.com/alexseitsinger/patched-rulesets/commit/093158d0cfcd73218f3f6cb4113bc15a80a48f8f))
+  - 0.8.4
+  ([16a8508b](https://github.com/alexseitsinger/patched-rulesets/commit/16a8508bba45ec73d2877a10f3c3bbab93706c83))
+  - Updates the changelog for v0.8.3.
+  ([4d47834a](https://github.com/alexseitsinger/patched-rulesets/commit/4d47834aab0f8969a8ec58ee945b57d859f2acc2))
+  - 0.8.3
+  ([84b1d624](https://github.com/alexseitsinger/patched-rulesets/commit/84b1d6245e0c51fee0ec85d72723b8c8ca6a01ba))
+  - Updates deos.
+  ([8d77f340](https://github.com/alexseitsinger/patched-rulesets/commit/8d77f34085ac950f90531f60fd1f58a5ff7dd689))
+  - Updates the changelog for v0.7.0.
+  ([2e23b50b](https://github.com/alexseitsinger/patched-rulesets/commit/2e23b50be4f3b5a499091b5c3c44cb0b4b02b7d2))
+  - 0.7.0
+  ([ddfce3e9](https://github.com/alexseitsinger/patched-rulesets/commit/ddfce3e94b99c3e9aaca5e4039bf97070a89e457))
+  - Updates the changelog for v0.6.1.
+  ([f27a961d](https://github.com/alexseitsinger/patched-rulesets/commit/f27a961d98b4cd17dc4e04d0b1044f5e91882f42))
+  - 0.6.1
+  ([af5cbf74](https://github.com/alexseitsinger/patched-rulesets/commit/af5cbf746dd439f0af3630ae345ddd3e7e4679c6))
+  - Updates the changelog for v0.6.0.
+  ([865e8069](https://github.com/alexseitsinger/patched-rulesets/commit/865e8069ba52f5011257dfaee8a6a759d66f7484))
+  - 0.6.0
+  ([aa139477](https://github.com/alexseitsinger/patched-rulesets/commit/aa1394777dd05bd1584adedd6a28a91376011e30))
 
-### Bug Fixes
-- Fixes keyword spacing for stroustrup. ([3921fa8](https://github.com/alexseitsinger/patched-rulesets/commit/3921fa844193520f27c06c77fead9cd8e8520fae))
-
-### Code Refactoring
-- Allows whole file eslint disabled. ([ebf3b34](https://github.com/alexseitsinger/patched-rulesets/commit/ebf3b34f574e39c06235dddfb7ba266a492ac69d))
-- Changes name for package.json. ([8b72a84](https://github.com/alexseitsinger/patched-rulesets/commit/8b72a84d9458e0aec648b432b5d1d9063162a8c8))
-- Disables prettier plugin. ([6dfd218](https://github.com/alexseitsinger/patched-rulesets/commit/6dfd2184f14fc4485ef319b6d554d7f851e3bced))
-- Removes indent from outerIIFEBody ([c0dd440](https://github.com/alexseitsinger/patched-rulesets/commit/c0dd440f1ce54f3c76457c16551158b1c539b046))
-- Removes prettier plugin from defaults. ([4d88116](https://github.com/alexseitsinger/patched-rulesets/commit/4d88116f748c15f0bcc77759f47b8b96754e2051))
-- Updates comments & re-enables some. ([d781e7c](https://github.com/alexseitsinger/patched-rulesets/commit/d781e7cafd7341f8ef2f43db8f84b6350cf4f6e1))
-
-### Features
-- Adds new rule. ([8d8bb8c](https://github.com/alexseitsinger/patched-rulesets/commit/8d8bb8c28a4fd1d6a6cde2c6ff62528b4939ec58))
-- adds normalize module ([7c8e8b4](https://github.com/alexseitsinger/patched-rulesets/commit/7c8e8b4b18c3c147dde766229d8512f6f0b0b78f))
-- Adds patch for eslint-comments. ([d431256](https://github.com/alexseitsinger/patched-rulesets/commit/d431256ce5323706a3d22b68c59435cfffd8def0))
+  - **release**
+    - v0.11.0 codename(enchanted-street)
+  ([b917b82e](https://github.com/alexseitsinger/patched-rulesets/commit/b917b82ef77588ae449de3971e322d9701b69dd5))
 
 
-<a name="v0.1.0"></a>
-## [v0.1.0](https://github.com/alexseitsinger/patched-rulesets/compare/ff67dfb80c8bd93a4fe295e942fdc3c6d81795cd...v0.1.0) (2020-03-11)
 
-### Bug Fixes
-- Fixes imports/requires. ([2b3018f](https://github.com/alexseitsinger/patched-rulesets/commit/2b3018facf9580f3030035fae04d7506fe045c70))
-- Removes broken plugin. ([a8e10b2](https://github.com/alexseitsinger/patched-rulesets/commit/a8e10b24c996858065054916807b8f88ca77e644))
-
-### Code Refactoring
-- Disables comment rule. ([9fef03b](https://github.com/alexseitsinger/patched-rulesets/commit/9fef03bfab39dcab29ccf1e149910979bfcc1234))
-- Moves content to main package. ([7b60fa4](https://github.com/alexseitsinger/patched-rulesets/commit/7b60fa424bd3455319e471d240601aea39a46654))
-- Moves some modules into this package. ([fdf22cc](https://github.com/alexseitsinger/patched-rulesets/commit/fdf22cc10583f11e90445189163b65382d4ce8e2))
-- Renames directory. ([05d009a](https://github.com/alexseitsinger/patched-rulesets/commit/05d009aad3af7cdeaa890cfd01e823dd9074ae19))
-- Updates max-lines-per-function. ([8323967](https://github.com/alexseitsinger/patched-rulesets/commit/8323967e043a251624bf50d8366ca13ef1b30403))
-- Warn for comment rules. ([6833c4a](https://github.com/alexseitsinger/patched-rulesets/commit/6833c4affa6f2b630898eb5a3e22bfbd7eac3268))
-
-### Features
-- Adds patches and rules from presets. ([bf1d60c](https://github.com/alexseitsinger/patched-rulesets/commit/bf1d60cc65f84b52c6f644fa8d38e6a041ecb380))
-- Adds patches for prettier. ([2468bf3](https://github.com/alexseitsinger/patched-rulesets/commit/2468bf3afb2e5b3a3438ae548b6f53478fbb62dc))
-- Initial commit. ([ff67dfb](https://github.com/alexseitsinger/patched-rulesets/commit/ff67dfb80c8bd93a4fe295e942fdc3c6d81795cd))
 
 
