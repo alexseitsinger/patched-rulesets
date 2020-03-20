@@ -4,8 +4,8 @@ const confusingBrowserGlobals = require("confusing-browser-globals")
  * We specify some specific ignore patterns to exclude from our max-len rule.
  * This should prevent our imports and require paths from wrapping to a second line.
  */
-const requireStatement = `^(var|let|const)\\s.+\\s*=\\s*require\\(['"].+['"]\\)$`
-const importStatement = `^import\\s.+\\sfrom\\s['"].+['"]$`
+const requireStatement = `^(var|let|const)\\s.+\\s*=\\s*require\\(['"].+['"]\\);?$`
+const importStatement = `^import\\s.+\\sfrom\\s['"].+['"];?$`
 const maxLengthIgnorePattern = `(${requireStatement})|(${importStatement})`
 
 module.exports = {
