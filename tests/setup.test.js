@@ -15,6 +15,7 @@ const patchedConfig = {
   linebreakStyle: "unix",
   semi: "never",
   nodeVersion: process.version,
+  ecmaVersion: 2020,
 }
 
 describe("setup", () => {
