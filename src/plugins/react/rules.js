@@ -479,11 +479,9 @@ module.exports = {
     "error",
     {
       order: [
-        "static-variables",
-        "instance-variables",
         "lifecycle-variables",
+        "instance-variables",
         "lifecycle-methods",
-        "static-methods",
         "instance-methods",
         "event-methods",
         "everything-else",
