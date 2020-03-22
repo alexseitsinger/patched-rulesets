@@ -15,7 +15,7 @@ const groups = {
     "sort-destructure-keys",
     "promise",
   ],
-  react: [ "react", "react-hooks", "react-perf" ],
+  react: [ "react", "react-hooks" ],
   reactES6: ["better-styled-components"],
   redux: [ "react-redux", "redux-saga" ],
   typescript: [ "@typescript-eslint/eslint-plugin", "tsdoc" ],
