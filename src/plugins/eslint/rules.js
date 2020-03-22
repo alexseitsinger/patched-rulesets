@@ -107,11 +107,11 @@ module.exports = {
    * https://eslint.org/docs/rules/capitalized-comments.
    */
   "capitalized-comments": [
-    "error",
+    "warn",
     "always",
     {
       ignorePattern: capitalizedCommentsIgnorePattern,
-      ignoreInlineComments: false,
+      ignoreInlineComments: true,
       ignoreConsecutiveComments: false,
     },
   ],
