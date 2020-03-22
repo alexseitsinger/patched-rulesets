@@ -568,7 +568,7 @@ module.exports = {
   "max-statements": [
     "error",
     {
-      max: 35,
+      max: 50,
     },
   ],
 
