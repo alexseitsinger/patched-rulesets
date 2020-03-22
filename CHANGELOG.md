@@ -5,6 +5,8 @@ _Rulesets used with the Patched linter & formatter_
 
 
 ## Bug Fixes
+  - Adds node builtins to core-modules.
+  ([57b671d8](https://github.com/alexseitsinger/patched-rulesets/commit/57b671d889f40a6d35caf6f9dd496cb498ff4d8b))
   - Removes node version rules for now.
   ([0375f0ea](https://github.com/alexseitsinger/patched-rulesets/commit/0375f0eaeb7b5124d8e7209101ff546469561b05))
   - Fixes typo.
@@ -45,6 +47,16 @@ _Rulesets used with the Patched linter & formatter_
 
 
 ## Refactor
+  - Increase max-statements.
+  ([3ab360b9](https://github.com/alexseitsinger/patched-rulesets/commit/3ab360b98624cd513f751c375c126388515b400a))
+  - Moves import resolver into jest ruleset.
+  ([36f5f059](https://github.com/alexseitsinger/patched-rulesets/commit/36f5f0593e672cd1b02884e0e11edf4794d11817))
+  - Adjusts order or sort-imports.
+  ([26a8e7c7](https://github.com/alexseitsinger/patched-rulesets/commit/26a8e7c7f3dfb06dc557fbcb658622e4592385e5))
+  - Ignores ignore comments.
+  ([c86ff0d4](https://github.com/alexseitsinger/patched-rulesets/commit/c86ff0d45ccd5924c2ce536a941f395d53e57dd9))
+  - Removes react-perf as plugin for react.
+  ([c2454aee](https://github.com/alexseitsinger/patched-rulesets/commit/c2454aee531adfaf8368cc2907705253e52a174e))
   - Renames normalizers.
   ([7e9fb01d](https://github.com/alexseitsinger/patched-rulesets/commit/7e9fb01dbcfcf660e0e13e18de1060171fba1f03))
   - Adds Rule to each function name.
@@ -87,6 +99,12 @@ _Rulesets used with the Patched linter & formatter_
 
 
 ## Chore
+  - Updates deps.
+  ([24b429a4](https://github.com/alexseitsinger/patched-rulesets/commit/24b429a485ae1a3a5dde8eeadaf9719992f13d09))
+  - Max_line_length for md.
+  ([9b7eb53f](https://github.com/alexseitsinger/patched-rulesets/commit/9b7eb53fcbea0524fd9074b9e177987582544732))
+  - Updates the changelog for v0.11.2.
+  ([dfe19e68](https://github.com/alexseitsinger/patched-rulesets/commit/dfe19e681e7f4a7f7a35233bab3305a27a093d01))
   - Updates the changelog for v0.11.1.
   ([bc873132](https://github.com/alexseitsinger/patched-rulesets/commit/bc8731322abb98e5a2c0733d96f772b18eb70afc))
   - Updates the changelog for v0.11.0.
@@ -131,6 +149,8 @@ _Rulesets used with the Patched linter & formatter_
   ([aa139477](https://github.com/alexseitsinger/patched-rulesets/commit/aa1394777dd05bd1584adedd6a28a91376011e30))
 
   - **release**
+    - v0.12.0 codename(steep-volcano)
+  ([14185fa9](https://github.com/alexseitsinger/patched-rulesets/commit/14185fa9affe3a077cda6ed228d7f314599d4e63))
     - v0.11.2 codename(waggish-fly)
   ([eb765ae6](https://github.com/alexseitsinger/patched-rulesets/commit/eb765ae6ab3ccbdfd711b63fcee7d57de73af8b0))
     - v0.11.1 codename(friendly-addition)
