@@ -374,7 +374,7 @@ module.exports = {
   "import/no-nodejs-modules": [
     "error",
     {
-      allow: [ "fs", "path", "child_process", "os" ],
+      allow: [ "fs", "path", "child_process", "os", "crypto", "net" ],
     },
   ],
 
