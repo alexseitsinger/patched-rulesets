@@ -468,12 +468,25 @@ module.exports = {
        */
       replacements: {
         /**
-         * Disable some replacements for React.
+         * Just for convenience, disable converting apps -> applications, etc.
+         */
+        app: false,
+        apps: false,
+        /**
+         * These are some basic props for React, so disable.
          */
         prop: false,
         props: false,
         ref: false,
         refs: false,
+        /**
+         * These replacements normally add an '_' to the end of the name, so just
+         * disable replacments instead.
+         */
+        arg: false,
+        args: false,
+        mod: false,
+        mods: false,
       },
 
       /**
