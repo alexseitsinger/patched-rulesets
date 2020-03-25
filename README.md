@@ -1,6 +1,6 @@
 # Patched Rulesets
 
-Rulsets for the generating eslint configs used with Patched. This package isn't necessary to install manually as it's already used by [Patched](https://github.com/alexseitsinger/patched).
+Collection of eslint configs for various plugins. There are automatically loaded by [Patched Linter & Formatter][1].
 
 ## Installation
 
@@ -12,7 +12,8 @@ yarn add patched-rulesets
 
 #### createConfig
 
-Returns a complete eslint configuration object that contains rules for the plugins of each specified plugin group.
+Returns a complete eslint configuration object that contains rules for the plugins of
+each specified plugin group.
 
 ```javascript
 const { createConfig, getPlugins } = require("patched-rulesets")
@@ -35,7 +36,9 @@ module.exports = {
 
 #### getRuleSet
 
-Returns the rules, patches, and options for the specified plugin. This is used internally by createConfig, but exposed in case some extra manual adjustments are necessary.
+Returns the rules, patches, and options for the specified plugin. This is used
+internally by createConfig, but exposed in case some extra manual adjustments are
+necessary.
 
 ```javascript
 const { getRuleSet } = require("patched-rulesets")
@@ -61,10 +64,12 @@ Returns an object of groups, with each containing an array of plugin names.
 
 Name        | Plugins included
 ---         | ---
-core        | eslint-comments, node, sort-requires, import, simple-import-sort, unused-imports, promise, unicorn, sort-destructure-keys, no-loops, prettier
-react       | react, react-perf, react-hooks, better-styled-components
+core        | eslint-comments, node, sort-requires, , sort-destructure-keys, no-loops
+coreES6     | import, simple-import-sort, unused-imports, promise, unicorn
+react       | react, react-hooks
+reactES6    | better-styled-components
 redux       | react-redux, redux-saga
-typescript  | tsdoc, @typescript-eslint
+typescript  | @typescript-eslint, tsdoc
 safety      | security
 prose       | markdown, spellcheck
 json        | json
@@ -80,7 +85,7 @@ Converts the provided array of group names into the actual list of plugin names.
 const { getPlugins } = require("patched-rulesets")
 
 const plugins = getPlugins(["react"])
-// -> ["react", "react-hooks", "react-perf", "better-styled-components"]
+// -> ["react", "react-hooks"]
 ```
 
 ---
@@ -92,6 +97,7 @@ ther own eslint config.
 
 Name           | Plugin groups used
 ---            | ---
+nodeOnly       | none
 js             | core
 jsReact        | core, react
 jsReactRedux   | core, react, redux
@@ -120,3 +126,4 @@ module.exports = {
 }
 ```
 
+[1]: https://github.com/alexseitsinger/patched
