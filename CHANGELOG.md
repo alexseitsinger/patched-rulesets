@@ -32,6 +32,10 @@ _Rulesets used with the Patched linter & formatter_
 
 
 ## Features
+  - Disables/updated abbrev replacements.
+  ([be957bc2](https://github.com/alexseitsinger/patched-rulesets/commit/be957bc2ece8e5a4da56c183c5a9f1983af29fcc))
+  - Adds more allowed nodejs modules.
+  ([e60f0fe1](https://github.com/alexseitsinger/patched-rulesets/commit/e60f0fe15f937e13a34a1cb8763dd7330ac977a2))
   - Adds changeable ecmaVersion.
   ([82830066](https://github.com/alexseitsinger/patched-rulesets/commit/82830066060858cb8347cff92c111cc0dac677ca))
   - Adds linebreakStyle to normalizing.
@@ -42,6 +46,13 @@ _Rulesets used with the Patched linter & formatter_
   ([dd9f40d4](https://github.com/alexseitsinger/patched-rulesets/commit/dd9f40d450af67e08112d58325aa47904452bda8))
   - Adds normalizing for import settings.
   ([01026f8f](https://github.com/alexseitsinger/patched-rulesets/commit/01026f8f2cbc3a4b2dd88e8c1a3ec13fc50f8c50))
+
+
+
+
+## Documentation
+  - Updates readme.
+  ([5a134985](https://github.com/alexseitsinger/patched-rulesets/commit/5a134985f3a1988b3831c608edda745e4543fe0d))
 
 
 
@@ -99,6 +110,8 @@ _Rulesets used with the Patched linter & formatter_
 
 
 ## Chore
+  - Updates the changelog for v0.12.0.
+  ([bb81534e](https://github.com/alexseitsinger/patched-rulesets/commit/bb81534e05b0bf05c5a858740f805889b85f9339))
   - Updates deps.
   ([24b429a4](https://github.com/alexseitsinger/patched-rulesets/commit/24b429a485ae1a3a5dde8eeadaf9719992f13d09))
   - Max_line_length for md.
@@ -149,6 +162,8 @@ _Rulesets used with the Patched linter & formatter_
   ([aa139477](https://github.com/alexseitsinger/patched-rulesets/commit/aa1394777dd05bd1584adedd6a28a91376011e30))
 
   - **release**
+    - v0.13.0 codename(innate-passenger)
+  ([e8b83c97](https://github.com/alexseitsinger/patched-rulesets/commit/e8b83c97bcf6df42477e2a77103b372d4f9be9e7))
     - v0.12.0 codename(steep-volcano)
   ([14185fa9](https://github.com/alexseitsinger/patched-rulesets/commit/14185fa9affe3a077cda6ed228d7f314599d4e63))
     - v0.11.2 codename(waggish-fly)
