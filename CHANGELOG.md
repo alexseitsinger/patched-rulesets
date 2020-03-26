@@ -5,6 +5,8 @@ _Rulesets used with the Patched linter & formatter_
 
 
 ## Bug Fixes
+  - Fixes react normalize.
+  ([09c88bb6](https://github.com/alexseitsinger/patched-rulesets/commit/09c88bb61a41819f930a7bb31a90fdcf89d2af6e))
   - Adds node builtins to core-modules.
   ([57b671d8](https://github.com/alexseitsinger/patched-rulesets/commit/57b671d889f40a6d35caf6f9dd496cb498ff4d8b))
   - Removes node version rules for now.
@@ -116,6 +118,10 @@ _Rulesets used with the Patched linter & formatter_
 
 
 ## Chore
+  - Yarn -> PNPM
+  ([348c8a1f](https://github.com/alexseitsinger/patched-rulesets/commit/348c8a1feb081df12bca6a3eed10f6e6e0867cd2))
+  - Updates the changelog for v0.14.0.
+  ([d6c90dea](https://github.com/alexseitsinger/patched-rulesets/commit/d6c90dea9e3b0568cff485867357132b158e870b))
   - Updates the changelog for v0.13.0.
   ([99d9e621](https://github.com/alexseitsinger/patched-rulesets/commit/99d9e6214a65c2675781130d5c6c1a255c510145))
   - Updates the changelog for v0.12.0.
@@ -170,6 +176,8 @@ _Rulesets used with the Patched linter & formatter_
   ([aa139477](https://github.com/alexseitsinger/patched-rulesets/commit/aa1394777dd05bd1584adedd6a28a91376011e30))
 
   - **release**
+    - v0.15.0 codename(goodly-mark)
+  ([51d23d32](https://github.com/alexseitsinger/patched-rulesets/commit/51d23d32402f6041f045ef6e68eb350460edbe6d))
     - v0.14.0 codename(romantic-spy)
   ([17c001d7](https://github.com/alexseitsinger/patched-rulesets/commit/17c001d732e775553659e3b74646fea8f13c6749))
     - v0.13.0 codename(innate-passenger)
