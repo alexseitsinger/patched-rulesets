@@ -315,8 +315,9 @@ module.exports = {
    * so keep this rule disabled.
    * - Enabling this rule fixes indentation with stroustrup brace-style when formatting
    * with prettier.
+   * - This fule fucking sucket with type indentation. so just disable it.
    */
-  "@typescript-eslint/indent": indentRule(2),
+  "@typescript-eslint/indent": "off",
 
   /**
    * Require that interface names should or should not prefixed with I
