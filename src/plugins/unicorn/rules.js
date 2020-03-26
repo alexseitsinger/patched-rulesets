@@ -466,28 +466,7 @@ module.exports = {
        * Camelcase replacements will only match complete identifiers.
        * eg: errCb -> errCb, ErrCb (but NOT fooErrCb or errCbFoo)
        */
-      replacements: {
-        /**
-         * Just for convenience, disable converting apps -> applications, etc.
-         */
-        app: false,
-        apps: false,
-        /**
-         * These are some basic props for React, so disable.
-         */
-        prop: false,
-        props: false,
-        ref: false,
-        refs: false,
-        /**
-         * These replacements normally add an '_' to the end of the name, so just
-         * disable replacments instead.
-         */
-        arg: false,
-        args: false,
-        mod: false,
-        mods: false,
-      },
+      replacements: {},
 
       /**
        * Exact matches with the whitelist override applying replacements.
@@ -496,24 +475,26 @@ module.exports = {
        * case-sensitively.
        */
       whitelist: {
-        // Class method (+ React)
-        constructor: true,
+        app: true,
+        apps: true,
+
+        arg: true,
+        args: true,
+
+        mod: true,
+        mods: true,
 
         // React
+        prop: true,
         props: true,
         ref: true,
-        componentDidMount: true,
-        componentDidUpdate: true,
-        shouldComponentUpdate: true,
-        componentWillUnmount: true,
+        refs: true,
         propTypes: true,
         defaultProps: true,
         getDerivedStateFromProps: true,
 
         // Package.json
         devDependencies: true,
-        peerDependencies: true,
-        optionalDependencies: true,
 
         // Jest
         setupFilesAfterEnv: true,
