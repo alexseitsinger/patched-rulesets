@@ -58,6 +58,12 @@ _Rulesets used with the Patched linter & formatter_
 
 
 ## Refactor
+  - Adjusts replacements/whitelists.
+  ([3eea6616](https://github.com/alexseitsinger/patched-rulesets/commit/3eea66164c5dd87966534118fa20f11a3b1ec1ff))
+  - Disables object-curly-spacing.
+  ([9ce8353f](https://github.com/alexseitsinger/patched-rulesets/commit/9ce8353fe6c08766cf5a96b394128e805a05ce33))
+  - Removes indent rule.
+  ([3d1f9897](https://github.com/alexseitsinger/patched-rulesets/commit/3d1f9897726b498321e66a08fcd6f80f508b3def))
   - Increase max-statements.
   ([3ab360b9](https://github.com/alexseitsinger/patched-rulesets/commit/3ab360b98624cd513f751c375c126388515b400a))
   - Moves import resolver into jest ruleset.
@@ -110,6 +116,8 @@ _Rulesets used with the Patched linter & formatter_
 
 
 ## Chore
+  - Updates the changelog for v0.13.0.
+  ([99d9e621](https://github.com/alexseitsinger/patched-rulesets/commit/99d9e6214a65c2675781130d5c6c1a255c510145))
   - Updates the changelog for v0.12.0.
   ([bb81534e](https://github.com/alexseitsinger/patched-rulesets/commit/bb81534e05b0bf05c5a858740f805889b85f9339))
   - Updates deps.
@@ -162,6 +170,8 @@ _Rulesets used with the Patched linter & formatter_
   ([aa139477](https://github.com/alexseitsinger/patched-rulesets/commit/aa1394777dd05bd1584adedd6a28a91376011e30))
 
   - **release**
+    - v0.14.0 codename(romantic-spy)
+  ([17c001d7](https://github.com/alexseitsinger/patched-rulesets/commit/17c001d732e775553659e3b74646fea8f13c6749))
     - v0.13.0 codename(innate-passenger)
   ([e8b83c97](https://github.com/alexseitsinger/patched-rulesets/commit/e8b83c97bcf6df42477e2a77103b372d4f9be9e7))
     - v0.12.0 codename(steep-volcano)
