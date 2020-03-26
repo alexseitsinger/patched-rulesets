@@ -945,14 +945,16 @@ module.exports = {
    *
    * (fixable).
    *
+   * This rule should match Prettier's style, and avoid spacing inside braces.
+   *
    * https://eslint.org/docs/rules/object-curly-spacing.
    */
   "object-curly-spacing": [
     "error",
-    "always",
+    "never",
     {
-      arraysInObjects: true,
-      objectsInObjects: true,
+      arraysInObjects: false,
+      objectsInObjects: false,
     },
   ],
 
