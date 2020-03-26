@@ -1,30 +1,35 @@
 const readPkgUp = require("read-pkg-up")
 
-const getReactVersion = () => {
-  const output = readPkgUp.sync()
-  const keys = [
-    "dependencies",
-    "peerDepedencies",
-    "optionalDependencies",
-    "devDependencies",
-  ]
-  let version = "detect"
-  if (output !== undefined && "packageJson" in output) {
-    keys.forEach(key => {
-      if (version !== "detect") {
-        return
-      }
-      if (key in output.packageJson) {
-        const deps = output.packageJson[key]
-        Object.keys(deps).forEach(depName => {
-          if (depName === "react") {
-            version = deps[depName]
-          }
-        })
-      }
-    })
-  }
+const keys = [
+  "dependencies",
+  "peerDepedencies",
+  "optionalDependencies",
+  "devDependencies",
+]
 
+const getReactVersion = () => {
+  let version = "detect"
+  try {
+    const pkg = readPkgUp.sync()
+    if (pkg !== undefined && "packageJson" in pkg) {
+      keys.forEach(key => {
+        if (version !== "detect") {
+          return
+        }
+        if (key in pkg.packageJson) {
+          const deps = pkg.packageJson[key]
+          Object.keys(deps).forEach(depName => {
+            if (depName === "react") {
+              version = deps[depName]
+            }
+          })
+        }
+      })
+    }
+  }
+  catch (error) {
+    //...
+  }
   return version
 }
 
